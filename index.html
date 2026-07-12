@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mine Blocks</title>
+
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+    <script src="Mine Blocks.js"></script>
+
+    <script>
+        window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { capture: false, passive: false });
+        window.addEventListener("keydown", function (e) {
+            var matches = e.target.matches ? e.target.matches('input') : e.target.msMatchesSelector('input');
+            if (!matches && [32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        window.addEventListener("mousedown", function (e) { if (e.button == 1) { e.preventDefault(); } });
+        window.addEventListener("wheel", function (e) { e.preventDefault(); }, { passive: false });
+        // Overload XMLHttpRequest to fix Lime crashing on download timeout - adds progressive downloads with fallback to retries
+        !function () { let e = XMLHttpRequest.prototype.send, t = XMLHttpRequest.prototype.open; XMLHttpRequest.prototype.open = function (e, a, s, n, i) { this._method = e, this._url = a, this._async = s, this._user = n, this._password = i, this._useOriginalSend = !1, this._downloadedBytes = 0, this._responseChunks = [], this._isResuming = !1, this._originalReadyStateChange = null, this._hasTimedOut = !1, t.apply(this, arguments) }, XMLHttpRequest.prototype.send = function (t) { if (this._useOriginalSend) { e.apply(this, arguments); return } let a = this, s = 0; function n() { if (s >= 5) { a._invokeReadyStateChangeError(); return } s++; let e = new XMLHttpRequest; if (e.open(a._method, a._url, a._async, a._user, a._password), e._useOriginalSend = !0, a._isResuming && a._downloadedBytes > 0) { let i = `bytes=${a._downloadedBytes}-`; e.setRequestHeader("Range", i) } else a._isResuming = !0; e.responseType = "arraybuffer", e.addEventListener("readystatechange", function () { e.readyState === XMLHttpRequest.DONE && (200 === e.status || 206 === e.status ? (a.readyState = e.readyState, a.status = e.status, a.response = e.response, a._originalReadyStateChange && a._originalReadyStateChange.apply(a, arguments)) : setTimeout(n, 2e3)) }), e.addEventListener("error", function () { setTimeout(n, 2e3) }), e.send(t) } this._originalReadyStateChange = this.onreadystatechange, this.onreadystatechange = function (e) { 4 !== a.readyState || 0 !== a.status || a._hasTimedOut ? a._originalReadyStateChange && a._originalReadyStateChange.call(a, e) : (a._hasTimedOut = !0, n()) }, this.timeout = 0, this.addEventListener("timeout", function () { a._hasTimedOut = !0, n() }), e.apply(this, arguments) }, XMLHttpRequest.prototype._invokeReadyStateChangeError = function () { this._originalReadyStateChange && (this.status = 400, this.readyState = 4, this._originalReadyStateChange()) } }();
+    </script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #content {
+            position: absolute;
+            background: #000000;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content"></div>
+</body>
+
+</html>
