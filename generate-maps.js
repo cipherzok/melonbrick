@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const generate = require("@babel/generator").default;
 const parser = require("@babel/parser");
 const t = require("@babel/types");
@@ -43,7 +44,11 @@ varToClass.String = "String";
 classToVar.Date = "Date";
 varToClass.Date = "Date";
 
-fs.writeFileSync("enum-to-var.json", JSON.stringify(enumToVar, null, 4));
-fs.writeFileSync("var-to-enum.json", JSON.stringify(varToEnum, null, 4));
-fs.writeFileSync("class-to-var.json", JSON.stringify(classToVar, null, 4));
-fs.writeFileSync("var-to-class.json", JSON.stringify(varToClass, null, 4));
+function writeJSON(name, json) {
+    fs.writeFileSync(path.join("maps", name  + ".json"), JSON.stringify(json, null, 4).replaceAll(".", "$d$"));
+}
+
+writeJSON("enum-to-var", enumToVar);
+writeJSON("var-to-enum", varToEnum);
+writeJSON("class-to-var", classToVar);
+writeJSON("var-to-class", varToClass);

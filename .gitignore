@@ -1,3 +1,5 @@
-node_modules
-Mine Blocks 1.31.2
-dist
+node_modules/
+Mine Blocks 1.31.2/
+Mine Blocks.js
+dist/
+decompiled/
