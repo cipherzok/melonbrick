@@ -7,10 +7,8 @@ const t = require("@babel/types");
 const code = fs.readFileSync("./Mine Blocks.js", "utf8");
 const program = parser.parse(code).program;
 
-const enumToVar = {};
-const varToEnum = {};
-const classToVar = {};
-const varToClass = {};
+const deobfuscateData = {};
+const renameMap = {};
 
 const iifeBody = program.body[37].declarations[0].init.body.body[0].declarations[0].init.body.body[0].expression.callee.body;
 
@@ -20,35 +18,34 @@ for (const statement of iifeArray) {
     if (statement.type === "VariableDeclaration") {
         for (const declarator of statement.declarations) {
             if (!declarator.init || declarator.init.type !== "AssignmentExpression") continue;
-            const varName = declarator.id.name;
             const left = declarator.init.left;
+            const varName = declarator.id.name;
             const enumName = left.property.value || left.property.name;
-            enumToVar[enumName] = varName;
-            varToEnum[varName] = enumName;
+            setData(varName, enumName, "enum");
         }
     }
     if (statement.type === "ExpressionStatement") {
         const left = statement.expression.left;
         const right = statement.expression.right;
         if (left && left.object && left.object.name === "m") {
-            const className = left.property.name || left.property.value;
             const varName = right.name;
-            classToVar[className] = varName;
-            varToClass[varName] = className;
+            const className = left.property.name || left.property.value;
+            setData(varName, className, "class");
         }
     }
 }
 
-classToVar.String = "String";
-varToClass.String = "String";
-classToVar.Date = "Date";
-varToClass.Date = "Date";
+setData("String", "String", "class");
+setData("Date", "Date", "class");
 
-function writeJSON(name, json) {
-    fs.writeFileSync(path.join("maps", name  + ".json"), JSON.stringify(json, null, 4).replaceAll(".", "$d$"));
+function setData(obfuscate, deobfuscate, type) {
+    deobfuscateData[deobfuscate] = { type, obfuscate };
+    renameMap[obfuscate] = deobfuscate;
 }
 
-writeJSON("enum-to-var", enumToVar);
-writeJSON("var-to-enum", varToEnum);
-writeJSON("class-to-var", classToVar);
-writeJSON("var-to-class", varToClass);
+function writeJSON(name, json) {
+    fs.writeFileSync(path.join("maps", name + ".json"), JSON.stringify(json, null, 4).replaceAll(".", "$d$"));
+}
+
+writeJSON("deobfuscate-data", deobfuscateData);
+writeJSON("rename-map", renameMap);
