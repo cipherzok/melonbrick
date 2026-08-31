@@ -3,19 +3,19 @@
         "type": "class",
         "obfuscate": "hb"
     },
-    "lime$d$app$d$IModule": {
+    "lime.app.IModule": {
         "type": "class",
         "obfuscate": "Ua"
     },
-    "lime$d$app$d$Module": {
+    "lime.app.Module": {
         "type": "class",
         "obfuscate": "ib"
     },
-    "lime$d$_internal$d$backend$d$html5$d$HTML5Application": {
+    "lime._internal.backend.html5.HTML5Application": {
         "type": "class",
         "obfuscate": "R"
     },
-    "lime$d$app$d$Application": {
+    "lime.app.Application": {
         "type": "class",
         "obfuscate": "U"
     },
@@ -35,7 +35,7 @@
         "type": "class",
         "obfuscate": "La"
     },
-    "lemongine$d$Color": {
+    "lemongine.Color": {
         "type": "class",
         "obfuscate": "v"
     },
@@ -119,7 +119,7 @@
         "type": "class",
         "obfuscate": "na"
     },
-    "lemongine$d$Lemongine": {
+    "lemongine.Lemongine": {
         "type": "class",
         "obfuscate": "r"
     },
@@ -135,11 +135,11 @@
         "type": "class",
         "obfuscate": "jb"
     },
-    "lemongine$d$Entity": {
+    "lemongine.Entity": {
         "type": "class",
         "obfuscate": "xa"
     },
-    "lemongine$d$QuadPoolEntity": {
+    "lemongine.QuadPoolEntity": {
         "type": "class",
         "obfuscate": "ja"
     },
@@ -179,7 +179,7 @@
         "type": "class",
         "obfuscate": "Pb"
     },
-    "lemongine$d$Point": {
+    "lemongine.Point": {
         "type": "class",
         "obfuscate": "k"
     },
@@ -187,23 +187,23 @@
         "type": "class",
         "obfuscate": "Oa"
     },
-    "lemongine$d$Image": {
+    "lemongine.Image": {
         "type": "class",
         "obfuscate": "Ta"
     },
-    "lime$d$graphics$d$ImageBuffer": {
+    "lime.graphics.ImageBuffer": {
         "type": "class",
         "obfuscate": "vc"
     },
-    "lime$d$graphics$d$Image": {
+    "lime.graphics.Image": {
         "type": "class",
         "obfuscate": "Va"
     },
-    "lime$d$graphics$d$ImageType": {
+    "lime.graphics.ImageType": {
         "type": "enum",
         "obfuscate": "Cc"
     },
-    "lime$d$app$d$_Event_Dynamic_Void": {
+    "lime.app._Event_Dynamic_Void": {
         "type": "class",
         "obfuscate": "oe"
     },
@@ -211,23 +211,23 @@
         "type": "class",
         "obfuscate": "J"
     },
-    "js$d$Boot": {
+    "js.Boot": {
         "type": "class",
         "obfuscate": "L"
     },
-    "haxe$d$ds$d$List": {
+    "haxe.ds.List": {
         "type": "class",
         "obfuscate": "Ic"
     },
-    "lime$d$_internal$d$backend$d$html5$d$HTML5Thread": {
+    "lime._internal.backend.html5.HTML5Thread": {
         "type": "class",
         "obfuscate": "ub"
     },
-    "lime$d$_internal$d$graphics$d$ImageCanvasUtil": {
+    "lime._internal.graphics.ImageCanvasUtil": {
         "type": "class",
         "obfuscate": "Ha"
     },
-    "lime$d$math$d$Rectangle": {
+    "lime.math.Rectangle": {
         "type": "class",
         "obfuscate": "Vb"
     },
@@ -239,7 +239,7 @@
         "type": "class",
         "obfuscate": "gb"
     },
-    "lemongine$d$Rectangle": {
+    "lemongine.Rectangle": {
         "type": "class",
         "obfuscate": "A"
     },
@@ -247,7 +247,7 @@
         "type": "class",
         "obfuscate": "x"
     },
-    "_String$d$String_Impl_": {
+    "_String.String_Impl_": {
         "type": "class",
         "obfuscate": "la"
     },
@@ -291,1639 +291,1639 @@
         "type": "class",
         "obfuscate": "ki"
     },
-    "blocks$d$Block": {
+    "blocks.Block": {
         "type": "class",
         "obfuscate": "Z"
     },
-    "blocks$d$Block_Acid": {
+    "blocks.Block_Acid": {
         "type": "class",
         "obfuscate": "Xe"
     },
-    "blocks$d$Block_Sand": {
+    "blocks.Block_Sand": {
         "type": "class",
         "obfuscate": "Ec"
     },
-    "blocks$d$Block_Anvil": {
+    "blocks.Block_Anvil": {
         "type": "class",
         "obfuscate": "Sf"
     },
-    "blocks$d$Block_Attached": {
+    "blocks.Block_Attached": {
         "type": "class",
         "obfuscate": "oc"
     },
-    "blocks$d$Block_Bamboo": {
+    "blocks.Block_Bamboo": {
         "type": "class",
         "obfuscate": "yd"
     },
-    "blocks$d$Block_Barrier": {
+    "blocks.Block_Barrier": {
         "type": "class",
         "obfuscate": "Ef"
     },
-    "blocks$d$Block_Bed": {
+    "blocks.Block_Bed": {
         "type": "class",
         "obfuscate": "Qe"
     },
-    "blocks$d$Block_BrewingStand": {
+    "blocks.Block_BrewingStand": {
         "type": "class",
         "obfuscate": "Qf"
     },
-    "blocks$d$Block_Button": {
+    "blocks.Block_Button": {
         "type": "class",
         "obfuscate": "fg"
     },
-    "blocks$d$Block_Cactus": {
+    "blocks.Block_Cactus": {
         "type": "class",
         "obfuscate": "Kf"
     },
-    "blocks$d$Block_Cake": {
+    "blocks.Block_Cake": {
         "type": "class",
         "obfuscate": "de"
     },
-    "blocks$d$Block_Cake_Cactus": {
+    "blocks.Block_Cake_Cactus": {
         "type": "class",
         "obfuscate": "bg"
     },
-    "blocks$d$Block_Cauldron": {
+    "blocks.Block_Cauldron": {
         "type": "class",
         "obfuscate": "Uf"
     },
-    "blocks$d$Block_Chest": {
+    "blocks.Block_Chest": {
         "type": "class",
         "obfuscate": "Xf"
     },
-    "blocks$d$Block_Chest_Ender": {
+    "blocks.Block_Chest_Ender": {
         "type": "class",
         "obfuscate": "Kg"
     },
-    "blocks$d$Block_Composter": {
+    "blocks.Block_Composter": {
         "type": "class",
         "obfuscate": "Lg"
     },
-    "blocks$d$Block_CraftingTable": {
+    "blocks.Block_CraftingTable": {
         "type": "class",
         "obfuscate": "Lf"
     },
-    "blocks$d$Block_Crop": {
+    "blocks.Block_Crop": {
         "type": "class",
         "obfuscate": "Pd"
     },
-    "blocks$d$Block_CropStem": {
+    "blocks.Block_CropStem": {
         "type": "class",
         "obfuscate": "df"
     },
-    "blocks$d$Block_Crop_Netherwart": {
+    "blocks.Block_Crop_Netherwart": {
         "type": "class",
         "obfuscate": "yg"
     },
-    "blocks$d$Block_Dirt": {
+    "blocks.Block_Dirt": {
         "type": "class",
         "obfuscate": "Ee"
     },
-    "blocks$d$Block_Dispenser": {
+    "blocks.Block_Dispenser": {
         "type": "class",
         "obfuscate": "Gg"
     },
-    "blocks$d$Block_Door": {
+    "blocks.Block_Door": {
         "type": "class",
         "obfuscate": "Ca"
     },
-    "blocks$d$Block_Dropper": {
+    "blocks.Block_Dropper": {
         "type": "class",
         "obfuscate": "Hg"
     },
-    "blocks$d$Block_EnchantmentTable": {
+    "blocks.Block_EnchantmentTable": {
         "type": "class",
         "obfuscate": "Dg"
     },
-    "blocks$d$Block_EnderDragonEgg": {
+    "blocks.Block_EnderDragonEgg": {
         "type": "class",
         "obfuscate": "zg"
     },
-    "blocks$d$Block_Farmland": {
+    "blocks.Block_Farmland": {
         "type": "class",
         "obfuscate": "Gf"
     },
-    "blocks$d$Block_Fence": {
+    "blocks.Block_Fence": {
         "type": "class",
         "obfuscate": "qd"
     },
-    "blocks$d$Block_FenceGate": {
+    "blocks.Block_FenceGate": {
         "type": "class",
         "obfuscate": "Je"
     },
-    "blocks$d$Block_Fire": {
+    "blocks.Block_Fire": {
         "type": "class",
         "obfuscate": "Qd"
     },
-    "blocks$d$Block_FrostedIce": {
+    "blocks.Block_FrostedIce": {
         "type": "class",
         "obfuscate": "Zf"
     },
-    "blocks$d$Block_Furnace": {
+    "blocks.Block_Furnace": {
         "type": "class",
         "obfuscate": "Of"
     },
-    "blocks$d$Block_Glowstone": {
+    "blocks.Block_Glowstone": {
         "type": "class",
         "obfuscate": "Pe"
     },
-    "blocks$d$Block_HealingCrystal": {
+    "blocks.Block_HealingCrystal": {
         "type": "class",
         "obfuscate": "Ag"
     },
-    "blocks$d$Block_J": {
+    "blocks.Block_J": {
         "type": "class",
         "obfuscate": "og"
     },
-    "blocks$d$Block_Lava": {
+    "blocks.Block_Lava": {
         "type": "class",
         "obfuscate": "We"
     },
-    "blocks$d$Block_Leaves": {
+    "blocks.Block_Leaves": {
         "type": "class",
         "obfuscate": "Lc"
     },
-    "blocks$d$Block_Lever": {
+    "blocks.Block_Lever": {
         "type": "class",
         "obfuscate": "gg"
     },
-    "blocks$d$Block_LilyPad": {
+    "blocks.Block_LilyPad": {
         "type": "class",
         "obfuscate": "Bg"
     },
-    "blocks$d$Block_MobSpawner": {
+    "blocks.Block_MobSpawner": {
         "type": "class",
         "obfuscate": "hg"
     },
-    "blocks$d$Block_Mycelium": {
+    "blocks.Block_Mycelium": {
         "type": "class",
         "obfuscate": "Hf"
     },
-    "blocks$d$Block_NoteBlock": {
+    "blocks.Block_NoteBlock": {
         "type": "class",
         "obfuscate": "mg"
     },
-    "blocks$d$Block_PistonArm": {
+    "blocks.Block_PistonArm": {
         "type": "class",
         "obfuscate": "$e"
     },
-    "blocks$d$Block_PistonBase": {
+    "blocks.Block_PistonBase": {
         "type": "class",
         "obfuscate": "Ze"
     },
-    "blocks$d$Block_PistonRetracted": {
+    "blocks.Block_PistonRetracted": {
         "type": "class",
         "obfuscate": "Ye"
     },
-    "blocks$d$Block_Portal": {
+    "blocks.Block_Portal": {
         "type": "class",
         "obfuscate": "kg"
     },
-    "blocks$d$Block_PortalFrame": {
+    "blocks.Block_PortalFrame": {
         "type": "class",
         "obfuscate": "wg"
     },
-    "blocks$d$Block_PressurePlate": {
+    "blocks.Block_PressurePlate": {
         "type": "class",
         "obfuscate": "Ve"
     },
-    "blocks$d$Block_Pumpkin": {
+    "blocks.Block_Pumpkin": {
         "type": "class",
         "obfuscate": "Wf"
     },
-    "blocks$d$Block_Rail": {
+    "blocks.Block_Rail": {
         "type": "class",
         "obfuscate": "bd"
     },
-    "blocks$d$Block_RailDetector": {
+    "blocks.Block_RailDetector": {
         "type": "class",
         "obfuscate": "ee"
     },
-    "blocks$d$Block_RailPowered": {
+    "blocks.Block_RailPowered": {
         "type": "class",
         "obfuscate": "af"
     },
-    "blocks$d$Block_Redstone": {
+    "blocks.Block_Redstone": {
         "type": "class",
         "obfuscate": "If"
     },
-    "blocks$d$Block_RedstoneLamp": {
+    "blocks.Block_RedstoneLamp": {
         "type": "class",
         "obfuscate": "rg"
     },
-    "blocks$d$Block_Rope": {
+    "blocks.Block_Rope": {
         "type": "class",
         "obfuscate": "Se"
     },
-    "blocks$d$Block_Sapling": {
+    "blocks.Block_Sapling": {
         "type": "class",
         "obfuscate": "He"
     },
-    "blocks$d$Block_Seaweed": {
+    "blocks.Block_Seaweed": {
         "type": "class",
         "obfuscate": "Vf"
     },
-    "blocks$d$Block_Sign": {
+    "blocks.Block_Sign": {
         "type": "class",
         "obfuscate": "qg"
     },
-    "blocks$d$Block_Snow": {
+    "blocks.Block_Snow": {
         "type": "class",
         "obfuscate": "Yf"
     },
-    "blocks$d$Block_Sugarcane": {
+    "blocks.Block_Sugarcane": {
         "type": "class",
         "obfuscate": "ag"
     },
-    "blocks$d$Block_TNT": {
+    "blocks.Block_TNT": {
         "type": "class",
         "obfuscate": "be"
     },
-    "blocks$d$Block_Torch": {
+    "blocks.Block_Torch": {
         "type": "class",
         "obfuscate": "Le"
     },
-    "blocks$d$Block_TorchOdd": {
+    "blocks.Block_TorchOdd": {
         "type": "class",
         "obfuscate": "ig"
     },
-    "blocks$d$Block_TorchRedstone": {
+    "blocks.Block_TorchRedstone": {
         "type": "class",
         "obfuscate": "eg"
     },
-    "blocks$d$Block_TrapDoor": {
+    "blocks.Block_TrapDoor": {
         "type": "class",
         "obfuscate": "Ne"
     },
-    "blocks$d$Block_Water": {
+    "blocks.Block_Water": {
         "type": "class",
         "obfuscate": "zd"
     },
-    "entities$d$Entity_Base": {
+    "entities.Entity_Base": {
         "type": "class",
         "obfuscate": "ya"
     },
-    "entities$d$Entity_Balloon": {
+    "entities.Entity_Balloon": {
         "type": "class",
         "obfuscate": "eh"
     },
-    "entities$d$Entity_Bobber": {
+    "entities.Entity_Bobber": {
         "type": "class",
         "obfuscate": "hf"
     },
-    "entities$d$Entity_Cart": {
+    "entities.Entity_Cart": {
         "type": "class",
         "obfuscate": "Ib"
     },
-    "entities$d$Entity_Dirt_Ball": {
+    "entities.Entity_Dirt_Ball": {
         "type": "class",
         "obfuscate": "ch"
     },
-    "entities$d$Entity_Drop": {
+    "entities.Entity_Drop": {
         "type": "class",
         "obfuscate": "tc"
     },
-    "entities$d$Entity_EHC": {
+    "entities.Entity_EHC": {
         "type": "class",
         "obfuscate": "ed"
     },
-    "entities$d$Entity_Egg": {
+    "entities.Entity_Egg": {
         "type": "class",
         "obfuscate": "jf"
     },
-    "entities$d$Entity_Egg_Fire": {
+    "entities.Entity_Egg_Fire": {
         "type": "class",
         "obfuscate": "kf"
     },
-    "entities$d$Entity_Enderpearl": {
+    "entities.Entity_Enderpearl": {
         "type": "class",
         "obfuscate": "zc"
     },
-    "entities$d$Entity_EyeOfEnder": {
+    "entities.Entity_EyeOfEnder": {
         "type": "class",
         "obfuscate": "bh"
     },
-    "entities$d$Entity_FallingBlock": {
+    "entities.Entity_FallingBlock": {
         "type": "class",
         "obfuscate": "dh"
     },
-    "entities$d$Entity_Flameball": {
+    "entities.Entity_Flameball": {
         "type": "class",
         "obfuscate": "hh"
     },
-    "entities$d$Entity_Henry": {
+    "entities.Entity_Henry": {
         "type": "class",
         "obfuscate": "mf"
     },
-    "entities$d$Entity_Lightning": {
+    "entities.Entity_Lightning": {
         "type": "class",
         "obfuscate": "Og"
     },
-    "lemongine$d$Mathz": {
+    "lemongine.Mathz": {
         "type": "class",
         "obfuscate": "t"
     },
-    "entities$d$Entity_Mob": {
+    "entities.Entity_Mob": {
         "type": "class",
         "obfuscate": "S"
     },
-    "entities$d$Entity_Mob_Bat": {
+    "entities.Entity_Mob_Bat": {
         "type": "class",
         "obfuscate": "oh"
     },
-    "entities$d$Entity_Mob_Blaze": {
+    "entities.Entity_Mob_Blaze": {
         "type": "class",
         "obfuscate": "wh"
     },
-    "entities$d$Entity_Mob_Chicken": {
+    "entities.Entity_Mob_Chicken": {
         "type": "class",
         "obfuscate": "qh"
     },
-    "entities$d$Entity_Mob_Cow": {
+    "entities.Entity_Mob_Cow": {
         "type": "class",
         "obfuscate": "ph"
     },
-    "entities$d$Entity_Mob_Creeper": {
+    "entities.Entity_Mob_Creeper": {
         "type": "class",
         "obfuscate": "Ed"
     },
-    "lemongine$d$Matrix4": {
+    "lemongine.Matrix4": {
         "type": "class",
         "obfuscate": "ba"
     },
-    "entities$d$Entity_Mob_EnderDragon": {
+    "entities.Entity_Mob_EnderDragon": {
         "type": "class",
         "obfuscate": "Ya"
     },
-    "entities$d$Entity_Mob_Enderman": {
+    "entities.Entity_Mob_Enderman": {
         "type": "class",
         "obfuscate": "Jb"
     },
-    "entities$d$Entity_Mob_Ghast": {
+    "entities.Entity_Mob_Ghast": {
         "type": "class",
         "obfuscate": "uh"
     },
-    "entities$d$Entity_Mob_MagmaCube": {
+    "entities.Entity_Mob_MagmaCube": {
         "type": "class",
         "obfuscate": "th"
     },
-    "entities$d$Entity_Mob_Nethereye": {
+    "entities.Entity_Mob_Nethereye": {
         "type": "class",
         "obfuscate": "nh"
     },
-    "entities$d$Entity_Mob_Pig": {
+    "entities.Entity_Mob_Pig": {
         "type": "class",
         "obfuscate": "Td"
     },
-    "entities$d$Entity_Mob_Player": {
+    "entities.Entity_Mob_Player": {
         "type": "class",
         "obfuscate": "lh"
     },
-    "entities$d$Entity_Mob_Rabbit": {
+    "entities.Entity_Mob_Rabbit": {
         "type": "class",
         "obfuscate": "rh"
     },
-    "entities$d$Entity_Mob_Scavenger": {
+    "entities.Entity_Mob_Scavenger": {
         "type": "class",
         "obfuscate": "ih"
     },
-    "entities$d$Entity_Mob_Sheep": {
+    "entities.Entity_Mob_Sheep": {
         "type": "class",
         "obfuscate": "Vc"
     },
-    "entities$d$Entity_Mob_Skeleton": {
+    "entities.Entity_Mob_Skeleton": {
         "type": "class",
         "obfuscate": "Cd"
     },
-    "entities$d$Entity_Mob_Slime": {
+    "entities.Entity_Mob_Slime": {
         "type": "class",
         "obfuscate": "sh"
     },
-    "entities$d$Entity_Mob_SnowGolem": {
+    "entities.Entity_Mob_SnowGolem": {
         "type": "class",
         "obfuscate": "mh"
     },
-    "entities$d$Entity_Mob_Spawnskin": {
+    "entities.Entity_Mob_Spawnskin": {
         "type": "class",
         "obfuscate": "xh"
     },
-    "entities$d$Entity_Mob_Spider": {
+    "entities.Entity_Mob_Spider": {
         "type": "class",
         "obfuscate": "Dd"
     },
-    "entities$d$Entity_Mob_Squid": {
+    "entities.Entity_Mob_Squid": {
         "type": "class",
         "obfuscate": "vh"
     },
-    "entities$d$Entity_Mob_Wolf": {
+    "entities.Entity_Mob_Wolf": {
         "type": "class",
         "obfuscate": "Kc"
     },
-    "entities$d$Entity_Mob_Zombie": {
+    "entities.Entity_Mob_Zombie": {
         "type": "class",
         "obfuscate": "Ab"
     },
-    "entities$d$Entity_Mob_ZombiePigman": {
+    "entities.Entity_Mob_ZombiePigman": {
         "type": "class",
         "obfuscate": "Fd"
     },
-    "entities$d$Entity_Projectile": {
+    "entities.Entity_Projectile": {
         "type": "class",
         "obfuscate": "gh"
     },
-    "entities$d$Entity_Raft": {
+    "entities.Entity_Raft": {
         "type": "class",
         "obfuscate": "sd"
     },
-    "entities$d$Entity_SplashPotion": {
+    "entities.Entity_SplashPotion": {
         "type": "class",
         "obfuscate": "fh"
     },
-    "entities$d$Entity_XpOrb": {
+    "entities.Entity_XpOrb": {
         "type": "class",
         "obfuscate": "ge"
     },
-    "haxe$d$StackItem": {
+    "haxe.StackItem": {
         "type": "enum",
         "obfuscate": "Gd"
     },
-    "haxe$d$IMap": {
+    "haxe.IMap": {
         "type": "class",
         "obfuscate": "Hd"
     },
-    "haxe$d$Exception": {
+    "haxe.Exception": {
         "type": "class",
         "obfuscate": "sa"
     },
-    "haxe$d$Log": {
+    "haxe.Log": {
         "type": "class",
         "obfuscate": "Ja"
     },
-    "haxe$d$NativeStackTrace": {
+    "haxe.NativeStackTrace": {
         "type": "class",
         "obfuscate": "re"
     },
-    "haxe$d$Serializer": {
+    "haxe.Serializer": {
         "type": "class",
         "obfuscate": "cc"
     },
-    "haxe$d$Timer": {
+    "haxe.Timer": {
         "type": "class",
         "obfuscate": "Bc"
     },
-    "haxe$d$_Unserializer$d$DefaultResolver": {
+    "haxe._Unserializer.DefaultResolver": {
         "type": "class",
         "obfuscate": "yh"
     },
-    "haxe$d$Unserializer": {
+    "haxe.Unserializer": {
         "type": "class",
         "obfuscate": "Xb"
     },
-    "haxe$d$ValueException": {
+    "haxe.ValueException": {
         "type": "class",
         "obfuscate": "nf"
     },
-    "haxe$d$crypto$d$Adler32": {
+    "haxe.crypto.Adler32": {
         "type": "class",
         "obfuscate": "se"
     },
-    "haxe$d$io$d$Bytes": {
+    "haxe.io.Bytes": {
         "type": "class",
         "obfuscate": "Ra"
     },
-    "haxe$d$crypto$d$Base64": {
+    "haxe.crypto.Base64": {
         "type": "class",
         "obfuscate": "ic"
     },
-    "haxe$d$crypto$d$BaseCode": {
+    "haxe.crypto.BaseCode": {
         "type": "class",
         "obfuscate": "zh"
     },
-    "haxe$d$ds$d$BalancedTree": {
+    "haxe.ds.BalancedTree": {
         "type": "class",
         "obfuscate": "of"
     },
-    "haxe$d$ds$d$TreeNode": {
+    "haxe.ds.TreeNode": {
         "type": "class",
         "obfuscate": "wc"
     },
-    "haxe$d$ds$d$EnumValueMap": {
+    "haxe.ds.EnumValueMap": {
         "type": "class",
         "obfuscate": "gd"
     },
-    "haxe$d$ds$d$IntMap": {
+    "haxe.ds.IntMap": {
         "type": "class",
         "obfuscate": "eb"
     },
-    "haxe$d$ds$d$_List$d$ListNode": {
+    "haxe.ds._List.ListNode": {
         "type": "class",
         "obfuscate": "kh"
     },
-    "haxe$d$ds$d$ObjectMap": {
+    "haxe.ds.ObjectMap": {
         "type": "class",
         "obfuscate": "Wc"
     },
-    "haxe$d$ds$d$StringMap": {
+    "haxe.ds.StringMap": {
         "type": "class",
         "obfuscate": "g"
     },
-    "haxe$d$ds$d$_StringMap$d$StringMapKeyIterator": {
+    "haxe.ds._StringMap.StringMapKeyIterator": {
         "type": "class",
         "obfuscate": "li"
     },
-    "haxe$d$exceptions$d$PosException": {
+    "haxe.exceptions.PosException": {
         "type": "class",
         "obfuscate": "te"
     },
-    "haxe$d$exceptions$d$NotImplementedException": {
+    "haxe.exceptions.NotImplementedException": {
         "type": "class",
         "obfuscate": "Ah"
     },
-    "haxe$d$http$d$HttpBase": {
+    "haxe.http.HttpBase": {
         "type": "class",
         "obfuscate": "pf"
     },
-    "haxe$d$http$d$HttpJs": {
+    "haxe.http.HttpJs": {
         "type": "class",
         "obfuscate": "qf"
     },
-    "haxe$d$io$d$BytesBuffer": {
+    "haxe.io.BytesBuffer": {
         "type": "class",
         "obfuscate": "ve"
     },
-    "haxe$d$io$d$Input": {
+    "haxe.io.Input": {
         "type": "class",
         "obfuscate": "Bh"
     },
-    "haxe$d$io$d$BytesInput": {
+    "haxe.io.BytesInput": {
         "type": "class",
         "obfuscate": "Ch"
     },
-    "haxe$d$io$d$Encoding": {
+    "haxe.io.Encoding": {
         "type": "enum",
         "obfuscate": "Mi"
     },
-    "haxe$d$io$d$Eof": {
+    "haxe.io.Eof": {
         "type": "class",
         "obfuscate": "rf"
     },
-    "haxe$d$io$d$Error": {
+    "haxe.io.Error": {
         "type": "enum",
         "obfuscate": "Qc"
     },
-    "haxe$d$io$d$Path": {
+    "haxe.io.Path": {
         "type": "class",
         "obfuscate": "dc"
     },
-    "haxe$d$iterators$d$ArrayIterator": {
+    "haxe.iterators.ArrayIterator": {
         "type": "class",
         "obfuscate": "Xd"
     },
-    "haxe$d$net$d$ReadyState": {
+    "haxe.net.ReadyState": {
         "type": "enum",
         "obfuscate": "Ad"
     },
-    "haxe$d$net$d$WebSocket": {
+    "haxe.net.WebSocket": {
         "type": "class",
         "obfuscate": "ke"
     },
-    "haxe$d$net$d$impl$d$WebSocketJs": {
+    "haxe.net.impl.WebSocketJs": {
         "type": "class",
         "obfuscate": "Dh"
     },
-    "haxe$d$zip$d$ExtraField": {
+    "haxe.zip.ExtraField": {
         "type": "enum",
         "obfuscate": "we"
     },
-    "haxe$d$zip$d$Huffman": {
+    "haxe.zip.Huffman": {
         "type": "enum",
         "obfuscate": "Xc"
     },
-    "haxe$d$zip$d$HuffTools": {
+    "haxe.zip.HuffTools": {
         "type": "class",
         "obfuscate": "mi"
     },
-    "haxe$d$zip$d$_InflateImpl$d$Window": {
+    "haxe.zip._InflateImpl.Window": {
         "type": "class",
         "obfuscate": "ni"
     },
-    "haxe$d$zip$d$_InflateImpl$d$State": {
+    "haxe.zip._InflateImpl.State": {
         "type": "enum",
         "obfuscate": "Kb"
     },
-    "haxe$d$zip$d$InflateImpl": {
+    "haxe.zip.InflateImpl": {
         "type": "class",
         "obfuscate": "ac"
     },
-    "haxe$d$zip$d$Reader": {
+    "haxe.zip.Reader": {
         "type": "class",
         "obfuscate": "sf"
     },
-    "io$d$newgrounds$d$ICallable": {
+    "io.newgrounds.ICallable": {
         "type": "class",
         "obfuscate": "Eh"
     },
-    "io$d$newgrounds$d$Call": {
+    "io.newgrounds.Call": {
         "type": "class",
         "obfuscate": "md"
     },
-    "io$d$newgrounds$d$CallError": {
+    "io.newgrounds.CallError": {
         "type": "enum",
         "obfuscate": "uf"
     },
-    "io$d$newgrounds$d$utils$d$Dispatcher": {
+    "io.newgrounds.utils.Dispatcher": {
         "type": "class",
         "obfuscate": "Gh"
     },
-    "io$d$newgrounds$d$NGLite": {
+    "io.newgrounds.NGLite": {
         "type": "class",
         "obfuscate": "Yc"
     },
-    "io$d$newgrounds$d$LoginFail": {
+    "io.newgrounds.LoginFail": {
         "type": "enum",
         "obfuscate": "Oi"
     },
-    "io$d$newgrounds$d$LoginCancel": {
+    "io.newgrounds.LoginCancel": {
         "type": "enum",
         "obfuscate": "Zi"
     },
-    "io$d$newgrounds$d$components$d$Component": {
+    "io.newgrounds.components.Component": {
         "type": "class",
         "obfuscate": "kc"
     },
-    "io$d$newgrounds$d$components$d$AppComponent": {
+    "io.newgrounds.components.AppComponent": {
         "type": "class",
         "obfuscate": "Hh"
     },
-    "io$d$newgrounds$d$components$d$CloudSaveComponent": {
+    "io.newgrounds.components.CloudSaveComponent": {
         "type": "class",
         "obfuscate": "Ih"
     },
-    "io$d$newgrounds$d$components$d$ComponentList": {
+    "io.newgrounds.components.ComponentList": {
         "type": "class",
         "obfuscate": "oi"
     },
-    "io$d$newgrounds$d$components$d$EventComponent": {
+    "io.newgrounds.components.EventComponent": {
         "type": "class",
         "obfuscate": "Jh"
     },
-    "io$d$newgrounds$d$components$d$GatewayComponent": {
+    "io.newgrounds.components.GatewayComponent": {
         "type": "class",
         "obfuscate": "Kh"
     },
-    "io$d$newgrounds$d$components$d$LoaderComponent": {
+    "io.newgrounds.components.LoaderComponent": {
         "type": "class",
         "obfuscate": "Lh"
     },
-    "io$d$newgrounds$d$components$d$MedalComponent": {
+    "io.newgrounds.components.MedalComponent": {
         "type": "class",
         "obfuscate": "Mh"
     },
-    "io$d$newgrounds$d$components$d$ScoreBoardComponent": {
+    "io.newgrounds.components.ScoreBoardComponent": {
         "type": "class",
         "obfuscate": "Nh"
     },
-    "io$d$newgrounds$d$crypto$d$Aes": {
+    "io.newgrounds.crypto.Aes": {
         "type": "class",
         "obfuscate": "vf"
     },
-    "io$d$newgrounds$d$crypto$d$_Aes$d$CBC": {
+    "io.newgrounds.crypto._Aes.CBC": {
         "type": "class",
         "obfuscate": "fb"
     },
-    "io$d$newgrounds$d$crypto$d$_Aes$d$PKCS7": {
+    "io.newgrounds.crypto._Aes.PKCS7": {
         "type": "class",
         "obfuscate": "Pi"
     },
-    "io$d$newgrounds$d$crypto$d$Rc4": {
+    "io.newgrounds.crypto.Rc4": {
         "type": "class",
         "obfuscate": "qi"
     },
-    "io$d$newgrounds$d$objects$d$events$d$TypedOutcome": {
+    "io.newgrounds.objects.events.TypedOutcome": {
         "type": "enum",
         "obfuscate": "tf"
     },
-    "io$d$newgrounds$d$objects$d$events$d$Outcome": {
+    "io.newgrounds.objects.events.Outcome": {
         "type": "enum",
         "obfuscate": "pi"
     },
-    "io$d$newgrounds$d$utils$d$AsyncNGCall": {
+    "io.newgrounds.utils.AsyncNGCall": {
         "type": "class",
         "obfuscate": "Ni"
     },
-    "io$d$newgrounds$d$utils$d$AsyncHttp": {
+    "io.newgrounds.utils.AsyncHttp": {
         "type": "class",
         "obfuscate": "Qi"
     },
-    "io$d$newgrounds$d$utils$d$TypedDispatcher": {
+    "io.newgrounds.utils.TypedDispatcher": {
         "type": "class",
         "obfuscate": "Fh"
     },
-    "js$d$Browser": {
+    "js.Browser": {
         "type": "class",
         "obfuscate": "ue"
     },
-    "js$d$lib$d$_ArrayBuffer$d$ArrayBufferCompat": {
+    "js.lib._ArrayBuffer.ArrayBufferCompat": {
         "type": "class",
         "obfuscate": "Ri"
     },
-    "lemongine$d$Sound": {
+    "lemongine.Sound": {
         "type": "class",
         "obfuscate": "wf"
     },
-    "lemongine$d$AudioTag": {
+    "lemongine.AudioTag": {
         "type": "enum",
         "obfuscate": "Sd"
     },
-    "lime$d$media$d$AudioSource": {
+    "lime.media.AudioSource": {
         "type": "class",
         "obfuscate": "Oh"
     },
-    "lime$d$_internal$d$backend$d$html5$d$HTML5AudioSource": {
+    "lime._internal.backend.html5.HTML5AudioSource": {
         "type": "class",
         "obfuscate": "ri"
     },
-    "lime$d$math$d$Vector4": {
+    "lime.math.Vector4": {
         "type": "class",
         "obfuscate": "si"
     },
-    "lemongine$d$AssetManager": {
+    "lemongine.AssetManager": {
         "type": "class",
         "obfuscate": "V"
     },
-    "lemongine$d$Audio": {
+    "lemongine.Audio": {
         "type": "class",
         "obfuscate": "Ma"
     },
-    "lemongine$d$BitmapFont": {
+    "lemongine.BitmapFont": {
         "type": "class",
         "obfuscate": "Mg"
     },
-    "lemongine$d$TextAlignment": {
+    "lemongine.TextAlignment": {
         "type": "enum",
         "obfuscate": "H"
     },
-    "lemongine$d$BitmapFontEntity": {
+    "lemongine.BitmapFontEntity": {
         "type": "class",
         "obfuscate": "Pc"
     },
-    "lemongine$d$CameraType": {
+    "lemongine.CameraType": {
         "type": "enum",
         "obfuscate": "Hc"
     },
-    "lemongine$d$Camera": {
+    "lemongine.Camera": {
         "type": "class",
         "obfuscate": "xe"
     },
-    "lemongine$d$File": {
+    "lemongine.File": {
         "type": "class",
         "obfuscate": "Hb"
     },
-    "lemongine$d$Geom": {
+    "lemongine.Geom": {
         "type": "class",
         "obfuscate": "da"
     },
-    "lemongine$d$Helpers": {
+    "lemongine.Helpers": {
         "type": "class",
         "obfuscate": "W"
     },
-    "lemongine$d$Vector3": {
+    "lemongine.Vector3": {
         "type": "class",
         "obfuscate": "O"
     },
-    "lemongine$d$ImageCubemap": {
+    "lemongine.ImageCubemap": {
         "type": "class",
         "obfuscate": "xf"
     },
-    "lemongine$d$ImageVector": {
+    "lemongine.ImageVector": {
         "type": "class",
         "obfuscate": "Ng"
     },
-    "lemongine$d$InputField": {
+    "lemongine.InputField": {
         "type": "class",
         "obfuscate": "Sa"
     },
-    "lemongine$d$Event": {
+    "lemongine.Event": {
         "type": "enum",
         "obfuscate": "db"
     },
-    "lemongine$d$LocalStorage": {
+    "lemongine.LocalStorage": {
         "type": "class",
         "obfuscate": "ud"
     },
-    "lemongine$d$Mesh": {
+    "lemongine.Mesh": {
         "type": "class",
         "obfuscate": "je"
     },
-    "lemongine$d$NGIO": {
+    "lemongine.NGIO": {
         "type": "class",
         "obfuscate": "ei"
     },
-    "lemongine$d$Renderer": {
+    "lemongine.Renderer": {
         "type": "class",
         "obfuscate": "za"
     },
-    "lemongine$d$Scene": {
+    "lemongine.Scene": {
         "type": "class",
         "obfuscate": "yb"
     },
-    "lemongine$d$ShaderProgram": {
+    "lemongine.ShaderProgram": {
         "type": "class",
         "obfuscate": "Dc"
     },
-    "lemongine$d$Sort": {
+    "lemongine.Sort": {
         "type": "class",
         "obfuscate": "hi"
     },
-    "lemongine$d$Web": {
+    "lemongine.Web": {
         "type": "class",
         "obfuscate": "cb"
     },
-    "lemongine$d$pieces$d$Attrib": {
+    "lemongine.pieces.Attrib": {
         "type": "class",
         "obfuscate": "id"
     },
-    "lemongine$d$pieces$d$BitmapFontGlyph": {
+    "lemongine.pieces.BitmapFontGlyph": {
         "type": "class",
         "obfuscate": "ti"
     },
-    "lemongine$d$screens$d$BaseScreen": {
+    "lemongine.screens.BaseScreen": {
         "type": "class",
         "obfuscate": "Qh"
     },
-    "lemongine$d$screens$d$SplashScreen": {
+    "lemongine.screens.SplashScreen": {
         "type": "class",
         "obfuscate": "jh"
     },
-    "lemongine$d$shader$d$BasicColor": {
+    "lemongine.shader.BasicColor": {
         "type": "class",
         "obfuscate": "Tb"
     },
-    "lemongine$d$shader$d$BasicFont": {
+    "lemongine.shader.BasicFont": {
         "type": "class",
         "obfuscate": "Jc"
     },
-    "lemongine$d$shader$d$BlendMode": {
+    "lemongine.shader.BlendMode": {
         "type": "enum",
         "obfuscate": "Za"
     },
-    "lemongine$d$shader$d$BasicTexture": {
+    "lemongine.shader.BasicTexture": {
         "type": "class",
         "obfuscate": "mc"
     },
-    "lemongine$d$shader$d$BasicTextureSingle": {
+    "lemongine.shader.BasicTextureSingle": {
         "type": "class",
         "obfuscate": "bb"
     },
-    "lemongine$d$shader$d$BasicVertexColor": {
+    "lemongine.shader.BasicVertexColor": {
         "type": "class",
         "obfuscate": "Ac"
     },
-    "lemongine$d$shader$d$Quality": {
+    "lemongine.shader.Quality": {
         "type": "enum",
         "obfuscate": "zf"
     },
-    "lemongine$d$shader$d$BlurFilter": {
+    "lemongine.shader.BlurFilter": {
         "type": "class",
         "obfuscate": "kd"
     },
-    "lemongine$d$shader$d$GradientRadial": {
+    "lemongine.shader.GradientRadial": {
         "type": "class",
         "obfuscate": "Ob"
     },
-    "lime$d$_internal$d$backend$d$html5$d$GameDeviceData": {
+    "lime._internal.backend.html5.GameDeviceData": {
         "type": "class",
         "obfuscate": "$h"
     },
-    "lime$d$_internal$d$backend$d$html5$d$HTML5HTTPRequest": {
+    "lime._internal.backend.html5.HTML5HTTPRequest": {
         "type": "class",
         "obfuscate": "Ea"
     },
-    "lime$d$_internal$d$backend$d$html5$d$HTML5Window": {
+    "lime._internal.backend.html5.HTML5Window": {
         "type": "class",
         "obfuscate": "Ka"
     },
-    "lime$d$_internal$d$format$d$BMP": {
+    "lime._internal.format.BMP": {
         "type": "class",
         "obfuscate": "Ki"
     },
-    "lime$d$_internal$d$format$d$BMPType": {
+    "lime._internal.format.BMPType": {
         "type": "enum",
         "obfuscate": "Vd"
     },
-    "lime$d$_internal$d$format$d$Base64": {
+    "lime._internal.format.Base64": {
         "type": "class",
         "obfuscate": "ld"
     },
-    "lime$d$_internal$d$format$d$Deflate": {
+    "lime._internal.format.Deflate": {
         "type": "class",
         "obfuscate": "Si"
     },
-    "lime$d$_internal$d$format$d$GZip": {
+    "lime._internal.format.GZip": {
         "type": "class",
         "obfuscate": "Ti"
     },
-    "lime$d$_internal$d$format$d$JPEG": {
+    "lime._internal.format.JPEG": {
         "type": "class",
         "obfuscate": "Li"
     },
-    "lime$d$_internal$d$format$d$LZMA": {
+    "lime._internal.format.LZMA": {
         "type": "class",
         "obfuscate": "Ui"
     },
-    "lime$d$_internal$d$format$d$PNG": {
+    "lime._internal.format.PNG": {
         "type": "class",
         "obfuscate": "ii"
     },
-    "lime$d$_internal$d$format$d$Zlib": {
+    "lime._internal.format.Zlib": {
         "type": "class",
         "obfuscate": "Vi"
     },
-    "lime$d$_internal$d$graphics$d$ImageDataUtil": {
+    "lime._internal.graphics.ImageDataUtil": {
         "type": "class",
         "obfuscate": "nb"
     },
-    "lime$d$_internal$d$graphics$d$_ImageDataUtil$d$ImageDataView": {
+    "lime._internal.graphics._ImageDataUtil.ImageDataView": {
         "type": "class",
         "obfuscate": "nd"
     },
-    "lime$d$app$d$Future": {
+    "lime.app.Future": {
         "type": "class",
         "obfuscate": "Xa"
     },
-    "lime$d$app$d$Promise": {
+    "lime.app.Promise": {
         "type": "class",
         "obfuscate": "xc"
     },
-    "lime$d$app$d$_Event_Float_Float_Float_Void": {
+    "lime.app._Event_Float_Float_Float_Void": {
         "type": "class",
         "obfuscate": "wi"
     },
-    "lime$d$app$d$_Event_Float_Float_Int_Void": {
+    "lime.app._Event_Float_Float_Int_Void": {
         "type": "class",
         "obfuscate": "xi"
     },
-    "lime$d$app$d$_Event_Float_Float_Void": {
+    "lime.app._Event_Float_Float_Void": {
         "type": "class",
         "obfuscate": "Af"
     },
-    "lime$d$app$d$_Event_Float_Float_lime_ui_MouseButton_Void": {
+    "lime.app._Event_Float_Float_lime_ui_MouseButton_Void": {
         "type": "class",
         "obfuscate": "yi"
     },
-    "lime$d$app$d$_Event_Float_Float_lime_ui_MouseWheelMode_Void": {
+    "lime.app._Event_Float_Float_lime_ui_MouseWheelMode_Void": {
         "type": "class",
         "obfuscate": "zi"
     },
-    "lime$d$app$d$_Event_Int_Float_Void": {
+    "lime.app._Event_Int_Float_Void": {
         "type": "class",
         "obfuscate": "Ai"
     },
-    "lime$d$app$d$_Event_Int_Int_Void": {
+    "lime.app._Event_Int_Int_Void": {
         "type": "class",
         "obfuscate": "Rh"
     },
-    "lime$d$app$d$_Event_Int_Void": {
+    "lime.app._Event_Int_Void": {
         "type": "class",
         "obfuscate": "Id"
     },
-    "lime$d$app$d$_Event_Int_lime_ui_JoystickHatPosition_Void": {
+    "lime.app._Event_Int_lime_ui_JoystickHatPosition_Void": {
         "type": "class",
         "obfuscate": "Bi"
     },
-    "lime$d$app$d$_Event_String_Int_Int_Void": {
+    "lime.app._Event_String_Int_Int_Void": {
         "type": "class",
         "obfuscate": "Ci"
     },
-    "lime$d$app$d$_Event_String_Void": {
+    "lime.app._Event_String_Void": {
         "type": "class",
         "obfuscate": "Bf"
     },
-    "lime$d$app$d$_Event_Void_Void": {
+    "lime.app._Event_Void_Void": {
         "type": "class",
         "obfuscate": "Lb"
     },
-    "lime$d$app$d$_Event_lime_graphics_RenderContext_Void": {
+    "lime.app._Event_lime_graphics_RenderContext_Void": {
         "type": "class",
         "obfuscate": "Sh"
     },
-    "lime$d$app$d$_Event_lime_ui_GamepadAxis_Float_Void": {
+    "lime.app._Event_lime_ui_GamepadAxis_Float_Void": {
         "type": "class",
         "obfuscate": "Di"
     },
-    "lime$d$app$d$_Event_lime_ui_GamepadButton_Void": {
+    "lime.app._Event_lime_ui_GamepadButton_Void": {
         "type": "class",
         "obfuscate": "Th"
     },
-    "lime$d$app$d$_Event_lime_ui_Gamepad_Void": {
+    "lime.app._Event_lime_ui_Gamepad_Void": {
         "type": "class",
         "obfuscate": "Ei"
     },
-    "lime$d$app$d$_Event_lime_ui_Joystick_Void": {
+    "lime.app._Event_lime_ui_Joystick_Void": {
         "type": "class",
         "obfuscate": "Fi"
     },
-    "lime$d$app$d$_Event_lime_ui_KeyCode_lime_ui_KeyModifier_Void": {
+    "lime.app._Event_lime_ui_KeyCode_lime_ui_KeyModifier_Void": {
         "type": "class",
         "obfuscate": "Uh"
     },
-    "lime$d$app$d$_Event_lime_ui_Touch_Void": {
+    "lime.app._Event_lime_ui_Touch_Void": {
         "type": "class",
         "obfuscate": "ze"
     },
-    "lime$d$app$d$_Event_lime_ui_Window_Void": {
+    "lime.app._Event_lime_ui_Window_Void": {
         "type": "class",
         "obfuscate": "ai"
     },
-    "lime$d$graphics$d$ImageChannel": {
+    "lime.graphics.ImageChannel": {
         "type": "enum",
         "obfuscate": "ne"
     },
-    "lime$d$graphics$d$ImageFileFormat": {
+    "lime.graphics.ImageFileFormat": {
         "type": "enum",
         "obfuscate": "Vh"
     },
-    "lime$d$graphics$d$RenderContext": {
+    "lime.graphics.RenderContext": {
         "type": "class",
         "obfuscate": "vi"
     },
-    "lime$d$graphics$d$opengl$d$GL": {
+    "lime.graphics.opengl.GL": {
         "type": "class",
         "obfuscate": "yf"
     },
-    "lime$d$math$d$Vector2": {
+    "lime.math.Vector2": {
         "type": "class",
         "obfuscate": "me"
     },
-    "lime$d$media$d$AudioBuffer": {
+    "lime.media.AudioBuffer": {
         "type": "class",
         "obfuscate": "Mb"
     },
-    "lime$d$media$d$AudioContext": {
+    "lime.media.AudioContext": {
         "type": "class",
         "obfuscate": "Hi"
     },
-    "lime$d$media$d$AudioManager": {
+    "lime.media.AudioManager": {
         "type": "class",
         "obfuscate": "Yd"
     },
-    "lime$d$media$d$HTML5AudioContext": {
+    "lime.media.HTML5AudioContext": {
         "type": "class",
         "obfuscate": "Gi"
     },
-    "lime$d$media$d$OpenALAudioContext": {
+    "lime.media.OpenALAudioContext": {
         "type": "class",
         "obfuscate": "Wi"
     },
-    "lime$d$media$d$openal$d$ALC": {
+    "lime.media.openal.ALC": {
         "type": "class",
         "obfuscate": "Ae"
     },
-    "lime$d$net$d$_IHTTPRequest": {
+    "lime.net._IHTTPRequest": {
         "type": "class",
         "obfuscate": "Wh"
     },
-    "lime$d$net$d$_HTTPRequest$d$AbstractHTTPRequest": {
+    "lime.net._HTTPRequest.AbstractHTTPRequest": {
         "type": "class",
         "obfuscate": "od"
     },
-    "lime$d$net$d$_HTTPRequest_Bytes": {
+    "lime.net._HTTPRequest_Bytes": {
         "type": "class",
         "obfuscate": "Cf"
     },
-    "lime$d$net$d$_HTTPRequest_String": {
+    "lime.net._HTTPRequest_String": {
         "type": "class",
         "obfuscate": "Xh"
     },
-    "lime$d$net$d$_HTTPRequestErrorResponse": {
+    "lime.net._HTTPRequestErrorResponse": {
         "type": "class",
         "obfuscate": "ye"
     },
-    "lime$d$net$d$HTTPRequestHeader": {
+    "lime.net.HTTPRequestHeader": {
         "type": "class",
         "obfuscate": "ui"
     },
-    "lime$d$net$d$_HTTPRequest_lime_utils_Bytes": {
+    "lime.net._HTTPRequest_lime_utils_Bytes": {
         "type": "class",
         "obfuscate": "Yh"
     },
-    "lime$d$system$d$Clipboard": {
+    "lime.system.Clipboard": {
         "type": "class",
         "obfuscate": "Ub"
     },
-    "lime$d$system$d$Endian": {
+    "lime.system.Endian": {
         "type": "enum",
         "obfuscate": "ji"
     },
-    "lime$d$system$d$Sensor": {
+    "lime.system.Sensor": {
         "type": "class",
         "obfuscate": "pd"
     },
-    "lime$d$system$d$SensorType": {
+    "lime.system.SensorType": {
         "type": "enum",
         "obfuscate": "Xi"
     },
-    "lime$d$system$d$System": {
+    "lime.system.System": {
         "type": "class",
         "obfuscate": "Qb"
     },
-    "lime$d$text$d$Font": {
+    "lime.text.Font": {
         "type": "class",
         "obfuscate": "Rc"
     },
-    "lime$d$ui$d$FileDialog": {
+    "lime.ui.FileDialog": {
         "type": "class",
         "obfuscate": "Ph"
     },
-    "lime$d$ui$d$Gamepad": {
+    "lime.ui.Gamepad": {
         "type": "class",
         "obfuscate": "Rb"
     },
-    "lime$d$ui$d$Joystick": {
+    "lime.ui.Joystick": {
         "type": "class",
         "obfuscate": "Nb"
     },
-    "lime$d$ui$d$MouseCursor": {
+    "lime.ui.MouseCursor": {
         "type": "enum",
         "obfuscate": "Wa"
     },
-    "lime$d$ui$d$MouseWheelMode": {
+    "lime.ui.MouseWheelMode": {
         "type": "enum",
         "obfuscate": "Ud"
     },
-    "lime$d$ui$d$Touch": {
+    "lime.ui.Touch": {
         "type": "class",
         "obfuscate": "Yb"
     },
-    "lime$d$ui$d$Window": {
+    "lime.ui.Window": {
         "type": "class",
         "obfuscate": "ci"
     },
-    "lime$d$utils$d$AssetBundle": {
+    "lime.utils.AssetBundle": {
         "type": "class",
         "obfuscate": "Zc"
     },
-    "lime$d$utils$d$AssetCache": {
+    "lime.utils.AssetCache": {
         "type": "class",
         "obfuscate": "Ii"
     },
-    "lime$d$utils$d$AssetLibrary": {
+    "lime.utils.AssetLibrary": {
         "type": "class",
         "obfuscate": "tb"
     },
-    "lime$d$utils$d$AssetManifest": {
+    "lime.utils.AssetManifest": {
         "type": "class",
         "obfuscate": "Gb"
     },
-    "lime$d$utils$d$Assets": {
+    "lime.utils.Assets": {
         "type": "class",
         "obfuscate": "Ba"
     },
-    "lime$d$utils$d$BytePointerData": {
+    "lime.utils.BytePointerData": {
         "type": "class",
         "obfuscate": "Ji"
     },
-    "lime$d$utils$d$CompressionAlgorithm": {
+    "lime.utils.CompressionAlgorithm": {
         "type": "enum",
         "obfuscate": "lc"
     },
-    "lime$d$utils$d$Log": {
+    "lime.utils.Log": {
         "type": "class",
         "obfuscate": "kb"
     },
-    "lime$d$utils$d$PackedAssetLibrary": {
+    "lime.utils.PackedAssetLibrary": {
         "type": "class",
         "obfuscate": "$c"
     },
-    "lime$d$utils$d$Preloader": {
+    "lime.utils.Preloader": {
         "type": "class",
         "obfuscate": "bi"
     },
-    "particles$d$Particle_Base": {
+    "particles.Particle_Base": {
         "type": "class",
         "obfuscate": "va"
     },
-    "particles$d$Particle_Base_SS": {
+    "particles.Particle_Base_SS": {
         "type": "class",
         "obfuscate": "yc"
     },
-    "particles$d$Particle_Critical": {
+    "particles.Particle_Critical": {
         "type": "class",
         "obfuscate": "Rg"
     },
-    "particles$d$Particle_Dust": {
+    "particles.Particle_Dust": {
         "type": "class",
         "obfuscate": "td"
     },
-    "particles$d$Particle_Effect": {
+    "particles.Particle_Effect": {
         "type": "class",
         "obfuscate": "Sg"
     },
-    "particles$d$Particle_EnderSparkle": {
+    "particles.Particle_EnderSparkle": {
         "type": "class",
         "obfuscate": "Tg"
     },
-    "particles$d$Particle_Heart": {
+    "particles.Particle_Heart": {
         "type": "class",
         "obfuscate": "Rd"
     },
-    "particles$d$Particle_Grow": {
+    "particles.Particle_Grow": {
         "type": "class",
         "obfuscate": "Ug"
     },
-    "particles$d$Particle_LavaBubble": {
+    "particles.Particle_LavaBubble": {
         "type": "class",
         "obfuscate": "Vg"
     },
-    "particles$d$Particle_Mining": {
+    "particles.Particle_Mining": {
         "type": "class",
         "obfuscate": "gf"
     },
-    "particles$d$Particle_Rain": {
+    "particles.Particle_Rain": {
         "type": "class",
         "obfuscate": "Pg"
     },
-    "particles$d$Particle_RayThing": {
+    "particles.Particle_RayThing": {
         "type": "class",
         "obfuscate": "Wg"
     },
-    "particles$d$Particle_SS_Heart": {
+    "particles.Particle_SS_Heart": {
         "type": "class",
         "obfuscate": "ad"
     },
-    "particles$d$Particle_SS_Grow": {
+    "particles.Particle_SS_Grow": {
         "type": "class",
         "obfuscate": "Oc"
     },
-    "particles$d$Particle_SS_Mining": {
+    "particles.Particle_SS_Mining": {
         "type": "class",
         "obfuscate": "Sc"
     },
-    "particles$d$Particle_SS_Smoke2": {
+    "particles.Particle_SS_Smoke2": {
         "type": "class",
         "obfuscate": "Wd"
     },
-    "particles$d$Particle_SS_Spark": {
+    "particles.Particle_SS_Spark": {
         "type": "class",
         "obfuscate": "lf"
     },
-    "particles$d$Particle_Shockwave": {
+    "particles.Particle_Shockwave": {
         "type": "class",
         "obfuscate": "Xg"
     },
-    "particles$d$Particle_Smoke": {
+    "particles.Particle_Smoke": {
         "type": "class",
         "obfuscate": "Yg"
     },
-    "particles$d$Particle_Smoke2": {
+    "particles.Particle_Smoke2": {
         "type": "class",
         "obfuscate": "he"
     },
-    "particles$d$Particle_Snow": {
+    "particles.Particle_Snow": {
         "type": "class",
         "obfuscate": "Qg"
     },
-    "particles$d$Particle_Spark": {
+    "particles.Particle_Spark": {
         "type": "class",
         "obfuscate": "Zg"
     },
-    "particles$d$Particle_TorchTip": {
+    "particles.Particle_TorchTip": {
         "type": "class",
         "obfuscate": "$g"
     },
-    "particles$d$Particle_Water": {
+    "particles.Particle_Water": {
         "type": "class",
         "obfuscate": "ah"
     },
-    "renderers$d$Q_Base": {
+    "renderers.Q_Base": {
         "type": "class",
         "obfuscate": "ha"
     },
-    "renderers$d$Q_Nothing": {
+    "renderers.Q_Nothing": {
         "type": "class",
         "obfuscate": "Ff"
     },
-    "renderers$d$armor$d$Q_Boots": {
+    "renderers.armor.Q_Boots": {
         "type": "class",
         "obfuscate": "Eb"
     },
-    "renderers$d$armor$d$Q_Chestplate": {
+    "renderers.armor.Q_Chestplate": {
         "type": "class",
         "obfuscate": "Cb"
     },
-    "renderers$d$armor$d$Q_Helmet": {
+    "renderers.armor.Q_Helmet": {
         "type": "class",
         "obfuscate": "mb"
     },
-    "renderers$d$armor$d$Q_Leggings": {
+    "renderers.armor.Q_Leggings": {
         "type": "class",
         "obfuscate": "Db"
     },
-    "renderers$d$blocks$d$Q_Anvil": {
+    "renderers.blocks.Q_Anvil": {
         "type": "class",
         "obfuscate": "Tf"
     },
-    "renderers$d$blocks$d$Q_ArmorLeather": {
+    "renderers.blocks.Q_ArmorLeather": {
         "type": "class",
         "obfuscate": "Me"
     },
-    "renderers$d$blocks$d$Q_ArmorLeather_Boots": {
+    "renderers.blocks.Q_ArmorLeather_Boots": {
         "type": "class",
         "obfuscate": "Nf"
     },
-    "renderers$d$blocks$d$Q_ArmorLeather_Pants": {
+    "renderers.blocks.Q_ArmorLeather_Pants": {
         "type": "class",
         "obfuscate": "Mf"
     },
-    "renderers$d$blocks$d$Q_Armor_Boots": {
+    "renderers.blocks.Q_Armor_Boots": {
         "type": "class",
         "obfuscate": "Kd"
     },
-    "renderers$d$blocks$d$Q_Armor_Leggings": {
+    "renderers.blocks.Q_Armor_Leggings": {
         "type": "class",
         "obfuscate": "Jd"
     },
-    "renderers$d$blocks$d$Q_Backdrop": {
+    "renderers.blocks.Q_Backdrop": {
         "type": "class",
         "obfuscate": "Gc"
     },
-    "renderers$d$blocks$d$Q_Glass": {
+    "renderers.blocks.Q_Glass": {
         "type": "class",
         "obfuscate": "Ld"
     },
-    "renderers$d$blocks$d$Q_Backdrop_Glass": {
+    "renderers.blocks.Q_Backdrop_Glass": {
         "type": "class",
         "obfuscate": "tg"
     },
-    "renderers$d$blocks$d$Q_Wool": {
+    "renderers.blocks.Q_Wool": {
         "type": "class",
         "obfuscate": "pc"
     },
-    "renderers$d$blocks$d$Q_Backdrop_Wool": {
+    "renderers.blocks.Q_Backdrop_Wool": {
         "type": "class",
         "obfuscate": "ug"
     },
-    "renderers$d$blocks$d$Q_Balloon": {
+    "renderers.blocks.Q_Balloon": {
         "type": "class",
         "obfuscate": "ng"
     },
-    "renderers$d$blocks$d$Q_Barrier": {
+    "renderers.blocks.Q_Barrier": {
         "type": "class",
         "obfuscate": "De"
     },
-    "renderers$d$blocks$d$Q_Bed": {
+    "renderers.blocks.Q_Bed": {
         "type": "class",
         "obfuscate": "ae"
     },
-    "renderers$d$blocks$d$Q_BrewingStand": {
+    "renderers.blocks.Q_BrewingStand": {
         "type": "class",
         "obfuscate": "Rf"
     },
-    "renderers$d$blocks$d$Q_Cactus": {
+    "renderers.blocks.Q_Cactus": {
         "type": "class",
         "obfuscate": "Ie"
     },
-    "renderers$d$blocks$d$Q_Cake": {
+    "renderers.blocks.Q_Cake": {
         "type": "class",
         "obfuscate": "Te"
     },
-    "renderers$d$blocks$d$Q_CanPlaceSideways": {
+    "renderers.blocks.Q_CanPlaceSideways": {
         "type": "class",
         "obfuscate": "Ge"
     },
-    "renderers$d$blocks$d$Q_Carpet": {
+    "renderers.blocks.Q_Carpet": {
         "type": "class",
         "obfuscate": "$f"
     },
-    "renderers$d$blocks$d$Q_Cauldron": {
+    "renderers.blocks.Q_Cauldron": {
         "type": "class",
         "obfuscate": "nc"
     },
-    "renderers$d$blocks$d$Q_Clock": {
+    "renderers.blocks.Q_Clock": {
         "type": "class",
         "obfuscate": "cg"
     },
-    "renderers$d$blocks$d$Q_Compass": {
+    "renderers.blocks.Q_Compass": {
         "type": "class",
         "obfuscate": "dg"
     },
-    "renderers$d$blocks$d$Q_Torch": {
+    "renderers.blocks.Q_Torch": {
         "type": "class",
         "obfuscate": "Zb"
     },
-    "renderers$d$blocks$d$Q_CoralLantern": {
+    "renderers.blocks.Q_CoralLantern": {
         "type": "class",
         "obfuscate": "Ig"
     },
-    "renderers$d$blocks$d$Q_Foliage": {
+    "renderers.blocks.Q_Foliage": {
         "type": "class",
         "obfuscate": "fc"
     },
-    "renderers$d$blocks$d$Q_Crop": {
+    "renderers.blocks.Q_Crop": {
         "type": "class",
         "obfuscate": "Uc"
     },
-    "renderers$d$blocks$d$Q_CropStem": {
+    "renderers.blocks.Q_CropStem": {
         "type": "class",
         "obfuscate": "ef"
     },
-    "renderers$d$blocks$d$Q_Dirt": {
+    "renderers.blocks.Q_Dirt": {
         "type": "class",
         "obfuscate": "Fe"
     },
-    "renderers$d$blocks$d$Q_Piston": {
+    "renderers.blocks.Q_Piston": {
         "type": "class",
         "obfuscate": "Mc"
     },
-    "renderers$d$blocks$d$Q_Dispenser": {
+    "renderers.blocks.Q_Dispenser": {
         "type": "class",
         "obfuscate": "cf"
     },
-    "renderers$d$blocks$d$Q_Door": {
+    "renderers.blocks.Q_Door": {
         "type": "class",
         "obfuscate": "Fc"
     },
-    "renderers$d$blocks$d$Q_EnchantmentTable": {
+    "renderers.blocks.Q_EnchantmentTable": {
         "type": "class",
         "obfuscate": "Eg"
     },
-    "renderers$d$blocks$d$Q_EnderPearl": {
+    "renderers.blocks.Q_EnderPearl": {
         "type": "class",
         "obfuscate": "vg"
     },
-    "renderers$d$blocks$d$Q_Fence": {
+    "renderers.blocks.Q_Fence": {
         "type": "class",
         "obfuscate": "$d"
     },
-    "renderers$d$blocks$d$Q_Fire": {
+    "renderers.blocks.Q_Fire": {
         "type": "class",
         "obfuscate": "dd"
     },
-    "renderers$d$blocks$d$Q_FishingRod": {
+    "renderers.blocks.Q_FishingRod": {
         "type": "class",
         "obfuscate": "bf"
     },
-    "renderers$d$blocks$d$Q_FrostedIce": {
+    "renderers.blocks.Q_FrostedIce": {
         "type": "class",
         "obfuscate": "Md"
     },
-    "renderers$d$blocks$d$Q_Furnace": {
+    "renderers.blocks.Q_Furnace": {
         "type": "class",
         "obfuscate": "Pf"
     },
-    "renderers$d$blocks$d$Q_Gate": {
+    "renderers.blocks.Q_Gate": {
         "type": "class",
         "obfuscate": "Ke"
     },
-    "renderers$d$blocks$d$Q_HealingCrystal": {
+    "renderers.blocks.Q_HealingCrystal": {
         "type": "class",
         "obfuscate": "cd"
     },
-    "renderers$d$blocks$d$Q_Lever": {
+    "renderers.blocks.Q_Lever": {
         "type": "class",
         "obfuscate": "Tc"
     },
-    "renderers$d$blocks$d$Q_LilyPad": {
+    "renderers.blocks.Q_LilyPad": {
         "type": "class",
         "obfuscate": "Cg"
     },
-    "renderers$d$blocks$d$Q_Liquid": {
+    "renderers.blocks.Q_Liquid": {
         "type": "class",
         "obfuscate": "rd"
     },
-    "renderers$d$blocks$d$Q_Magma": {
+    "renderers.blocks.Q_Magma": {
         "type": "class",
         "obfuscate": "jg"
     },
-    "renderers$d$blocks$d$Q_Minecart": {
+    "renderers.blocks.Q_Minecart": {
         "type": "class",
         "obfuscate": "Ue"
     },
-    "renderers$d$blocks$d$Q_Minecart_Block": {
+    "renderers.blocks.Q_Minecart_Block": {
         "type": "class",
         "obfuscate": "fe"
     },
-    "renderers$d$blocks$d$Q_MobHead": {
+    "renderers.blocks.Q_MobHead": {
         "type": "class",
         "obfuscate": "ff"
     },
-    "renderers$d$blocks$d$Q_Portal": {
+    "renderers.blocks.Q_Portal": {
         "type": "class",
         "obfuscate": "lg"
     },
-    "renderers$d$blocks$d$Q_PortalFrame": {
+    "renderers.blocks.Q_PortalFrame": {
         "type": "class",
         "obfuscate": "xg"
     },
-    "renderers$d$blocks$d$Q_Potion": {
+    "renderers.blocks.Q_Potion": {
         "type": "class",
         "obfuscate": "Jg"
     },
-    "renderers$d$blocks$d$Q_Pumpkin": {
+    "renderers.blocks.Q_Pumpkin": {
         "type": "class",
         "obfuscate": "Oe"
     },
-    "renderers$d$blocks$d$Q_Rail": {
+    "renderers.blocks.Q_Rail": {
         "type": "class",
         "obfuscate": "Od"
     },
-    "renderers$d$blocks$d$Q_RandomRotation": {
+    "renderers.blocks.Q_RandomRotation": {
         "type": "class",
         "obfuscate": "Zd"
     },
-    "renderers$d$blocks$d$Q_Redstone": {
+    "renderers.blocks.Q_Redstone": {
         "type": "class",
         "obfuscate": "Jf"
     },
-    "renderers$d$blocks$d$Q_RedstoneLamp": {
+    "renderers.blocks.Q_RedstoneLamp": {
         "type": "class",
         "obfuscate": "sg"
     },
-    "renderers$d$blocks$d$Q_Rope": {
+    "renderers.blocks.Q_Rope": {
         "type": "class",
         "obfuscate": "ce"
     },
-    "renderers$d$blocks$d$Q_Shrub": {
+    "renderers.blocks.Q_Shrub": {
         "type": "class",
         "obfuscate": "pg"
     },
-    "renderers$d$blocks$d$Q_Slab": {
+    "renderers.blocks.Q_Slab": {
         "type": "class",
         "obfuscate": "qc"
     },
-    "renderers$d$blocks$d$Q_SpawnEgg": {
+    "renderers.blocks.Q_SpawnEgg": {
         "type": "class",
         "obfuscate": "Fg"
     },
-    "renderers$d$blocks$d$Q_Stairs": {
+    "renderers.blocks.Q_Stairs": {
         "type": "class",
         "obfuscate": "rc"
     },
-    "renderers$d$blocks$d$Q_TNT": {
+    "renderers.blocks.Q_TNT": {
         "type": "class",
         "obfuscate": "Re"
     },
-    "renderers$d$blocks$d$Q_TorchRedstone": {
+    "renderers.blocks.Q_TorchRedstone": {
         "type": "class",
         "obfuscate": "Nd"
     },
-    "screens$d$Menu_EnderCredits": {
+    "screens.Menu_EnderCredits": {
         "type": "class",
         "obfuscate": "fi"
     },
-    "screens$d$ScavengerFrames": {
+    "screens.ScavengerFrames": {
         "type": "enum",
         "obfuscate": "$b"
     },
-    "screens$d$Menu_Main": {
+    "screens.Menu_Main": {
         "type": "class",
         "obfuscate": "vd"
     },
-    "screens$d$MenuChicken": {
+    "screens.MenuChicken": {
         "type": "class",
         "obfuscate": "xd"
     },
-    "screens$d$MenuEgg": {
+    "screens.MenuEgg": {
         "type": "class",
         "obfuscate": "Be"
     },
-    "screens$d$ChickenNonsense": {
+    "screens.ChickenNonsense": {
         "type": "class",
         "obfuscate": "di"
     },
-    "screens$d$Menu_Pause": {
+    "screens.Menu_Pause": {
         "type": "class",
         "obfuscate": "Nc"
     },
-    "screens$d$Menu_Respawn": {
+    "screens.Menu_Respawn": {
         "type": "class",
         "obfuscate": "gi"
     },
-    "screens$d$Menu_Settings": {
+    "screens.Menu_Settings": {
         "type": "class",
         "obfuscate": "Zh"
     },
-    "shader$d$BlendMode": {
+    "shader.BlendMode": {
         "type": "enum",
         "obfuscate": "Aa"
     },
-    "shader$d$BlockShader": {
+    "shader.BlockShader": {
         "type": "class",
         "obfuscate": "Fa"
     },
-    "shader$d$GradientRadialMultiple": {
+    "shader.GradientRadialMultiple": {
         "type": "class",
         "obfuscate": "gc"
     },
-    "shader$d$LightingShader": {
+    "shader.LightingShader": {
         "type": "class",
         "obfuscate": "fd"
     },
-    "shader$d$ScaledText": {
+    "shader.ScaledText": {
         "type": "class",
         "obfuscate": "jc"
     },
-    "shader$d$TwoTexture": {
+    "shader.TwoTexture": {
         "type": "class",
         "obfuscate": "sc"
     },

@@ -1,8 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const generate = require("@babel/generator").default;
 const parser = require("@babel/parser");
-const t = require("@babel/types");
 
 const code = fs.readFileSync("./Mine Blocks.js", "utf8");
 const program = parser.parse(code).program;
@@ -44,7 +42,7 @@ function setData(obfuscate, deobfuscate, type) {
 }
 
 function writeJSON(name, json) {
-    fs.writeFileSync(path.join("maps", name + ".json"), JSON.stringify(json, null, 4).replaceAll(".", "$d$"));
+    fs.writeFileSync(path.join("maps", name + ".json"), JSON.stringify(json, null, 4));
 }
 
 writeJSON("deobfuscate-data", deobfuscateData);
