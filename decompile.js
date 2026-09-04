@@ -10,7 +10,7 @@ const renameMap = require("./maps/rename-map.json");
 
 const code = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
 
-const ast = parser.parse(code, { sourceType: "module" });
+const ast = parser.parse(code);
 
 const $lime_init = ast.program.body[37].declarations[0].init.body;
 const iife = $lime_init.body[0].declarations[0].init.body.body[0].expression.callee.body;
@@ -19,7 +19,17 @@ ast.program.body = iife.body;
 const fileNodes = {}
 
 for (const deobfuscate in deobfuscateData) {
-    fileNodes[deobfuscate] = parser.parse("", { sourceType: "module" });
+    fileNodes[deobfuscate] = parser.parse("");
+}
+
+function isClass(name) {
+    const deobfuscate = renameMap[name] || name;
+    if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "class") return true;
+}
+
+function isEnum(name) {
+    const deobfuscate = renameMap[name] || name;
+    if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "enum") return true;
 }
 
 traverse(ast, {
@@ -37,48 +47,15 @@ traverse(ast, {
     VariableDeclarator(path) {
         if (path.scope.parent) return;
         const varName = path.node.id.name;
-        const data = deobfuscateData[varName];
-        if (!data) return;
         const value = path.node.init;
-        if (data.type === "class") {
-            const classNode = fileNodes[varName];
-            const classBody = classNode.program.body;
-            if (varName.includes("$d$")) {
-                const node = t.assignmentExpression(
-                    "=",
-                    t.identifier(varName),
-                    value
-                );
-                classBody.push(node);
-            } else {
-                const node = t.variableDeclaration("var", [
-                    t.variableDeclarator(
-                        t.identifier(varName),
-                        value
-                    )
-                ]);
-                classBody.push(node);
-            }
-        }
-        if (data.type === "enum") {
-            const enumNode = fileNodes[varName];
-            const enumBody = enumNode.program.body;
-            if (varName.includes("$d$")) {
-                const node = t.assignmentExpression(
-                    "=",
-                    t.identifier(varName),
-                    value
-                );
-                enumBody.push(node);
-            } else {
-                const node = t.variableDeclaration("var", [
-                    t.variableDeclarator(
-                        t.identifier(varName),
-                        value
-                    )
-                ]);
-                enumBody.push(node);
-            }
+        if (isEnum(varName) || isClass(varName)) {
+            const body = fileNodes[varName].program.body;
+            const node = t.assignmentExpression(
+                "=",
+                t.identifier(varName),
+                value
+            );
+            body.push(node);
         }
     },
     AssignmentExpression(path) {
@@ -87,9 +64,9 @@ traverse(ast, {
         const left = path.node.left;
         if (left.type === "MemberExpression") {
             const objectName = left.object.name;
-            if (deobfuscateData[objectName]) {
-                const classBody = fileNodes[objectName].program.body;
-                classBody.push(path.node);
+            if (isEnum(objectName) || isClass(objectName)) {
+                const body = fileNodes[objectName].program.body;
+                body.push(path.node);
             }
             if (objectName === "m") {
                 const classBody = fileNodes[right.name].program.body;
@@ -100,13 +77,13 @@ traverse(ast, {
 })
 
 for (const name in fileNodes) {
-    const parts = name.split("$d$");
+    const parts = name.split(".");
 
     const fileName = parts.pop() + ".js";
     const dir = path.join("decompiled", ...parts);
 
     fs.mkdirSync(dir, { recursive: true });
 
-    const output = generator(fileNodes[name], {}).code.replaceAll("$d$", ".");
+    const output = generator(fileNodes[name], {}).code;
     fs.writeFileSync(path.join(dir, fileName), output);
 }
