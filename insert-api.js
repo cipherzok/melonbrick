@@ -10,11 +10,10 @@ const renameMap = require("./maps/rename-map.json");
 
 const code = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
 
-const ast = parser.parse(code);
-
-const $lime_init = ast.program.body[37].declarations[0].init.body;
-const iife = $lime_init.body[0].declarations[0].init.body.body[0].expression.callee.body;
-ast.program.body = iife.body;
+const haxeAST = parser.parse(code);
+const $lime_init = haxeAST.program.body[37].declarations[0].init.body;
+const iifeAST = parser.parse("");
+iifeAST.program.body = $lime_init.body[0].declarations[0].init.body.body[0].expression.callee.body.body;
 
 const fileNodes = {};
 
@@ -33,12 +32,17 @@ function isEnum(name) {
     if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "enum") return true;
 }
 
-traverse(ast, {
+traverse(iifeAST, {
     VariableDeclarator(path) {
         if (path.scope.parent) return;
         const varName = path.node.id.name;
         if (isEnum(varName) || isClass(varName)) {
-            fileNodes[varName].push(path.parentPath.node);
+            fileNodes[varName].push(t.variableDeclaration("var", [path.node]));
+            if (path.parentPath.node.declarations.length > 1) {
+                path.remove();
+            } else {
+                path.parentPath.remove();
+            }
         }
     },
     AssignmentExpression(path) {
@@ -49,9 +53,11 @@ traverse(ast, {
             const objectName = left.object.name;
             if (isEnum(objectName) || isClass(objectName)) {
                 fileNodes[objectName].push(path.node);
+                path.parentPath.remove();
             }
             if (objectName === "m") {
                 fileNodes[right.name].push(path.node);
+                path.parentPath.remove();
             }
         }
     }
@@ -68,4 +74,5 @@ for (const obfuscate in fileNodes) {
 
 const bundle = parser.parse("");
 bundle.program.body = Object.values(fileNodes).flat();
+fs.writeFileSync("residue.js", generator(iifeAST).code);
 fs.writeFileSync("bundle.js", generator(bundle).code);

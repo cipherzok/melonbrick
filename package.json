@@ -1,30 +1,30 @@
 {
-    "name": "melonbrick",
-    "version": "1.0.0",
-    "description": "",
-    "main": "main.js",
-    "scripts": {
-        "build": "pkg main.js --targets node18-win-x64,node18-linux-x64,node18-macos-x64 -o dist/melonbrick"
-    },
-    "pkg": {
-        "assets": [
-            "index.html",
-            "melonbrick.js"
-        ]
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "type": "commonjs",
-    "devDependencies": {
-        "pkg": "^5.8.1"
-    },
-    "dependencies": {
-        "@babel/generator": "^7.29.7",
-        "@babel/parser": "^7.29.7",
-        "@babel/traverse": "^7.29.7",
-        "@babel/types": "^7.29.7",
-        "adm-zip": "^0.5.18",
-        "got": "^11.8.6"
-    }
+  "name": "melonbrick",
+  "version": "1.0.0",
+  "description": "Mine Blocks mod loader based on the web version.",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cipherzok/melonbrick.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cipherzok/melonbrick/issues"
+  },
+  "homepage": "https://github.com/cipherzok/melonbrick#readme",
+  "dependencies": {
+    "@babel/generator": "^8.0.0",
+    "@babel/parser": "^8.0.4",
+    "@babel/traverse": "^8.0.4",
+    "@babel/types": "^8.0.4"
+  }
 }

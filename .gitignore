@@ -5,3 +5,4 @@ dist/
 decompiled/
 test/
 bundle.js
+residue.js
