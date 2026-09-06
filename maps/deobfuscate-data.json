@@ -1929,18 +1929,22 @@
     },
     "Math": {
         "type": "class",
-        "obfuscate": "Math"
+        "obfuscate": "Math",
+        "isGlobal": true
     },
     "Array": {
         "type": "class",
-        "obfuscate": "Array"
+        "obfuscate": "Array",
+        "isGlobal": true
     },
     "String": {
         "type": "class",
-        "obfuscate": "String"
+        "obfuscate": "String",
+        "isGlobal": true
     },
     "Date": {
         "type": "class",
-        "obfuscate": "Date"
+        "obfuscate": "Date",
+        "isGlobal": true
     }
 }
