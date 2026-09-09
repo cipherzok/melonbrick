@@ -32,6 +32,12 @@ function isEnum(name) {
     if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "enum") return true;
 }
 
+function unsafeIdentifier(name) {
+    const node = t.identifier("_");
+    node.name = name;
+    return node;
+}
+
 traverse(ast, {
     Program(path) {
         for (const oldName in renameMap) {
@@ -52,7 +58,7 @@ traverse(ast, {
             const body = fileNodes[varName].program.body;
             const node = t.assignmentExpression(
                 "=",
-                t.identifier(varName),
+                unsafeIdentifier(varName),
                 value
             );
             body.push(node);
