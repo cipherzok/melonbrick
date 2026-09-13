@@ -27,17 +27,18 @@ function constructorDefined(name, constructor) {
     return wrapper.constructor;
 }
 
-const patched = new WeakMap();
+const patchedMap = new WeakMap();
 
 function patch(target, name) {
-    const func = target[name];
+    let func = target;
+    if (name) func = target[name];
 
-    if (patched.has(target[name])) return;
+    if (patchedMap.has(func)) return;
 
     const after = [];
     const before = [];
 
-    target[name] = function (...args) {
+    const patched = function (...args) {
         const ctx = {
             args: [...args],
             returned: undefined,
@@ -58,18 +59,32 @@ function patch(target, name) {
         return ctx.returned;
     };
 
-    patched.set(target[name], { before, after })
+    patchedMap.set(patched, { before, after })
 
+    if (name) target[name] = patched;
+    return patched;
 }
 
 melonbrick.hookBefore = function (target, name, hook) {
-    patch(target, name);
-    patched.get(target[name]).before.push(hook);
+    const patched = patch(target, name);
+    patchedMap.get(patched).before.push(hook);
 }
 
 melonbrick.hookAfter = function (target, name, hook) {
-    patch(target, name);
-    patched.get(target[name]).after.push(hook);
+    const patched = patch(target, name);
+    patchedMap.get(patched).after.push(hook);
+}
+
+melonbrick.getHookBefore = function (func, hook) {
+    const patched = patch(func);
+    patchedMap.get(patched).before.push(hook);
+    return patched;
+}
+
+melonbrick.getHookAfter = function (func, hook) {
+    const patched = patch(func);
+    patchedMap.get(patched).after.push(hook);
+    return patched;
 }
 
 async function loadMods() {
