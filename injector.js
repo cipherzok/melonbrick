@@ -65,8 +65,9 @@ class Injector extends AstUtil {
             target = target[part];
         }
     }
-    constructorFound(path, varName) {
-        super.constructorFound(path, varName);
+    referenceFound(path, varName) {
+        super.referenceFound(path, varName);
+        if (!AstUtil.isClass(varName)) return;
         const varIdentifier = t.identifier(varName);
         this.addNode(varName, t.expressionStatement(
             t.assignmentExpression(
@@ -80,7 +81,7 @@ class Injector extends AstUtil {
                     ]
                 )
             )
-        ))
+        ));
     }
     generateExports() {
         function recursive(branch) {

@@ -18,6 +18,14 @@ class AstUtil {
         ast.program.body = array;
         return ast;
     }
+    static isClass(name) {
+        const deobfuscate = renameMap[name] || name;
+        if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "class") return true;
+    }
+    static isEnum(name) {
+        const deobfuscate = renameMap[name] || name;
+        if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "enum") return true;
+    }
     constructor(mineblocksCode) {
         this.mineblocksAST = parser.parse(mineblocksCode);
         this.$lime_init = this.mineblocksAST.program.body[37].declarations[0].init.body;
@@ -30,8 +38,8 @@ class AstUtil {
             VariableDeclarator(path) {
                 if (path.scope.parent) return;
                 const varName = path.node.id.name;
-                if (isEnum(varName) || isClass(varName)) {
-                    astUtil.constructorFound(path, varName);
+                if (AstUtil.isEnum(varName) || AstUtil.isClass(varName)) {
+                    astUtil.referenceFound(path, varName);
                     if (path.parentPath.node.declarations.length > 1) {
                         path.remove();
                     } else {
@@ -45,7 +53,7 @@ class AstUtil {
                 const left = path.node.left;
                 if (left.type === "MemberExpression") {
                     const objectName = left.object.name;
-                    if (isEnum(objectName) || isClass(objectName)) {
+                    if (AstUtil.isEnum(objectName) || AstUtil.isClass(objectName)) {
                         astUtil.addNode(objectName, path.node);
                         path.parentPath.remove();
                     }
@@ -57,7 +65,7 @@ class AstUtil {
             }
         }
     }
-    constructorFound(path, varName) {
+    referenceFound(path, varName) {
         this.addNode(varName, t.variableDeclaration("var", [path.node]));
     }
     getReferenceString(name) {
@@ -75,16 +83,6 @@ class AstUtil {
         if (!this.referenceNodes[deobfuscate]) this.referenceNodes[deobfuscate] = [];
         this.referenceNodes[deobfuscate].push(node);
     }
-}
-
-function isClass(name) {
-    const deobfuscate = renameMap[name] || name;
-    if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "class") return true;
-}
-
-function isEnum(name) {
-    const deobfuscate = renameMap[name] || name;
-    if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "enum") return true;
 }
 
 module.exports = AstUtil;

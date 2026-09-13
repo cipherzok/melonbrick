@@ -20,7 +20,7 @@ class Decompiler extends AstUtil {
             }
         }
     }
-    constructorFound(path, varName) {
+    referenceFound(path, varName) {
         this.addNode(varName, t.assignmentExpression(
             "=",
             AstUtil.unsafeIdentifier(path.node.id.name),
