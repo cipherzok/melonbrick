@@ -20,11 +20,10 @@ function referenceDefined(name) {
 }
 
 function constructorDefined(name, constructor) {
-    const wrapper = { constructor };
     if (waitingConstructor[name]) {
-        for (const callback of waitingConstructor[name]) callback(wrapper);
+        for (const callback of waitingConstructor[name]) constructor = callback(constructor);
     }
-    return wrapper.constructor;
+    return constructor;
 }
 
 const patchedMap = new WeakMap();
@@ -33,7 +32,7 @@ function patch(target, name) {
     let func = target;
     if (name) func = target[name];
 
-    if (patchedMap.has(func)) return;
+    if (patchedMap.has(func)) return func;
 
     const after = [];
     const before = [];

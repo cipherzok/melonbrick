@@ -4,6 +4,7 @@ const AstUtil = require("./ast-util")
 const t = require("@babel/types");
 const generator = require("@babel/generator").default;
 const parser = require("@babel/parser");
+const renameMap = require("./maps/rename-map.json");
 
 const deobfuscateData = require("./maps/deobfuscate-data.json");
 
@@ -63,6 +64,23 @@ class Injector extends AstUtil {
             if (!target[part]) target[part] = {}
             target = target[part];
         }
+    }
+    constructorFound(path, varName) {
+        super.constructorFound(path, varName);
+        const varIdentifier = t.identifier(varName);
+        this.addNode(varName, t.expressionStatement(
+            t.assignmentExpression(
+                "=",
+                varIdentifier,
+                t.callExpression(
+                    t.identifier("constructorDefined"),
+                    [
+                        t.stringLiteral(renameMap[varName]),
+                        varIdentifier
+                    ]
+                )
+            )
+        ))
     }
     generateExports() {
         function recursive(branch) {
