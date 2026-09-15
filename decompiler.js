@@ -21,6 +21,7 @@ class Decompiler extends AstUtil {
         }
     }
     referenceFound(path, varName) {
+        if (!varName.includes(".")) return super.referenceFound(path, varName);
         this.addNode(varName, t.assignmentExpression(
             "=",
             AstUtil.unsafeIdentifier(path.node.id.name),

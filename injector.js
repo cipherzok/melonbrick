@@ -18,6 +18,7 @@ class Injector extends AstUtil {
             AstUtil.unsafeIdentifier('window.lime.$scripts["Mine Blocks"]'),
             this.varD.declarations[0].init
         ));
+        this.bundle = [];
         this.mainCall = this.iife.body.pop();
         this.root = {};
         this.$lime_init.body.shift();
@@ -25,6 +26,10 @@ class Injector extends AstUtil {
     }
     process() {
         super.process();
+        const bundleCode = fs.readFileSync("bundle.js", { encoding: "utf8" });
+        const bundleAST = parser.parse(bundleCode);
+        this.bundle = bundleAST.program.body;
+        this.iife.body.push(...this.bundle);
         this.iife.body.push(this.mainCall);
         this.generateExports();
         this.main.push(...this.melonbrickAST.program.body)
@@ -50,7 +55,7 @@ class Injector extends AstUtil {
                 ]
             )
         )
-        this.iife.body.push(...this.referenceNodes[name]);
+        this.bundle.push(...this.referenceNodes[name]);
     }
     initBranch(name) {
         const parts = name.split(".");

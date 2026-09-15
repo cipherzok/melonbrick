@@ -8,6 +8,14 @@ const deobfuscateData = require("./maps/deobfuscate-data.json");
 const renameMap = require("./maps/rename-map.json");
 
 class AstUtil {
+    static rename(path, oldName, newName) {
+        const binding = path.scope.getBinding(oldName);
+        if (!binding) return;
+        binding.identifier.name = newName;
+        for (const ref of binding.referencePaths) {
+            ref.node.name = newName;
+        }
+    }
     static unsafeIdentifier(name) {
         const node = t.identifier("_");
         node.name = name;
