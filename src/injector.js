@@ -1,12 +1,13 @@
 const fs = require("fs");
 const path = require("path");
-const AstUtil = require("./ast-util")
 const t = require("@babel/types");
 const generator = require("@babel/generator").default;
 const parser = require("@babel/parser");
-const renameMap = require("./maps/rename-map.json");
 
-const deobfuscateData = require("./maps/deobfuscate-data.json");
+const AstUtil = require("./ast-util")
+
+const renameMap = require("./rename-map.json");
+const deobfuscateData = require("./deobfuscate-data.json");
 
 class Injector extends AstUtil {
     constructor(mineblocksCode, melonbrickCode) {

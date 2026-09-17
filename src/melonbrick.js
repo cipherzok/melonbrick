@@ -3,6 +3,19 @@ window.melonbrick = {}
 const waitingConstructor = {};
 const waitingReference = {};
 
+const eventListeners = {}
+
+melonbrick.listen = function (type, callback) {
+    if (!eventListeners[type]) eventListeners[type] = [];
+    eventListeners[type].push(callback)
+}
+
+melonbrick.emit = function (event) {
+    if (eventListeners[event.type]) {
+        for (const callback of eventListeners[event.type]) callback(event);
+    }
+}
+
 melonbrick.waitReference = function (name, callback) {
     if (!waitingReference[name]) waitingReference[name] = [];
     waitingReference[name].push(callback);

@@ -3,8 +3,5 @@ mine-blocks/
 Mine Blocks.js
 dist/
 decompiled/
-test/
+patch-base/
 bundle.js
-residue.js
-exports-test.js
-haxe.js

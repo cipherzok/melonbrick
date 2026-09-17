@@ -4,8 +4,8 @@ const generator = require("@babel/generator").default;
 const t = require("@babel/types");
 
 const order = require("./order.json");
-const deobfuscateData = require("./maps/deobfuscate-data.json");
-const renameMap = require("./maps/rename-map.json");
+const deobfuscateData = require("./deobfuscate-data.json");
+const renameMap = require("./rename-map.json");
 
 class AstUtil {
     static rename(path, oldName, newName) {

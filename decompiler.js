@@ -3,7 +3,7 @@ const path = require("path");
 const AstUtil = require("./ast-util")
 const t = require("@babel/types");
 
-const renameMap = require("./maps/rename-map.json");
+const renameMap = require("./src/rename-map.json");
 
 class Decompiler extends AstUtil {
     constructor(mineblocksCode) {
