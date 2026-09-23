@@ -1,15 +1,13 @@
-const fs = require("fs");
-const path = require("path");
 const t = require("@babel/types");
 const generator = require("@babel/generator").default;
 const parser = require("@babel/parser");
 
 const AstUtil = require("./ast-util")
+const Base = require("./base")
 
-const renameMap = require("./rename-map.json");
-const deobfuscateData = require("./deobfuscate-data.json");
+const { isClass, isNative } = require("./map-util");
 
-class Injector extends AstUtil {
+class Injector extends Base {
     constructor(mineblocksCode, melonbrickCode) {
         super(mineblocksCode);
         this.melonbrickAST = parser.parse(melonbrickCode);
@@ -25,44 +23,24 @@ class Injector extends AstUtil {
         this.$lime_init.body.shift();
         this.$lime_init.body[0].expression.alternate.expressions.splice(2, 1);
     }
-    process() {
-        super.process();
-        const bundleCode = fs.readFileSync("bundle.js", { encoding: "utf8" });
-        const bundleAST = parser.parse(bundleCode);
-        this.bundle = bundleAST.program.body;
+    end() {
         this.iife.body.push(...this.bundle);
         this.iife.body.push(this.mainCall);
         this.generateExports();
         this.main.push(...this.melonbrickAST.program.body)
-        fs.writeFileSync(path.join("mine-blocks", "init.js"), generator(this.mineblocksAST).code);
-        fs.writeFileSync(path.join("mine-blocks", "Mine Blocks.js"), generator(AstUtil.getAST(this.main)).code);
+        this.initCode = generator(this.mineblocksAST).code;
+        this.mainCode = generator(AstUtil.getAST(this.main)).code;
     }
     loop(name) {
         this.initBranch(name);
-        this.addNode(
-            name,
-            t.assignmentExpression(
-                "=",
-                AstUtil.unsafeIdentifier(name),
-                t.identifier(deobfuscateData[name].obfuscate)
-            )
-        );
-        this.addNode(
-            name,
-            t.callExpression(
-                t.identifier("referenceDefined"),
-                [
-                    t.stringLiteral(name)
-                ]
-            )
-        )
+        this.injectReference(name);
         this.bundle.push(...this.referenceNodes[name]);
     }
     initBranch(name) {
         const parts = name.split(".");
         const reference = parts.pop();
         if (parts.length === 0) {
-            if (!deobfuscateData[name].isGlobal) this.root[reference] = "rootReference";
+            if (!isNative(name)) this.root[reference] = "rootReference";
             return;
         }
         let target = this.root;
@@ -70,24 +48,6 @@ class Injector extends AstUtil {
             if (!target[part]) target[part] = {}
             target = target[part];
         }
-    }
-    referenceFound(path, varName) {
-        super.referenceFound(path, varName);
-        if (!AstUtil.isClass(varName)) return;
-        const varIdentifier = t.identifier(varName);
-        this.addNode(varName, t.expressionStatement(
-            t.assignmentExpression(
-                "=",
-                varIdentifier,
-                t.callExpression(
-                    t.identifier("constructorDefined"),
-                    [
-                        t.stringLiteral(renameMap[varName]),
-                        varIdentifier
-                    ]
-                )
-            )
-        ));
     }
     generateExports() {
         function recursive(branch) {
@@ -110,8 +70,4 @@ class Injector extends AstUtil {
     }
 }
 
-const mineblocksCode = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
-const melonbrickCode = fs.readFileSync("melonbrick.js", { encoding: "utf8" });
-
-const injector = new Injector(mineblocksCode, melonbrickCode);
-injector.process();
+module.exports = Injector;

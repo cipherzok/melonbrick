@@ -1930,21 +1930,21 @@
     "Math": {
         "type": "class",
         "obfuscate": "Math",
-        "isGlobal": true
+        "isNative": true
     },
     "Array": {
         "type": "class",
         "obfuscate": "Array",
-        "isGlobal": true
+        "isNative": true
     },
     "String": {
         "type": "class",
         "obfuscate": "String",
-        "isGlobal": true
+        "isNative": true
     },
     "Date": {
         "type": "class",
         "obfuscate": "Date",
-        "isGlobal": true
+        "isNative": true
     }
 }

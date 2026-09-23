@@ -1,13 +1,58 @@
 const parser = require("@babel/parser");
-const traverse = require("@babel/traverse").default;
-const generator = require("@babel/generator").default;
 const t = require("@babel/types");
-
-const order = require("./order.json");
-const deobfuscateData = require("./deobfuscate-data.json");
 const renameMap = require("./rename-map.json");
+const { isNative, isEnum } = require("./map-util")
+
+const deobfuscateData = require("./deobfuscate-data.json");
+const order = require("./order.json");
 
 class AstUtil {
+    constructor(mineblocksCode) {
+        this.referenceNodes = {};
+    }
+    flatReferences() {
+        this.bundle = Object.values(this.referenceNodes).flat();
+    }
+    injectReference(name) {
+        const node = this.referenceNodes[name];
+        const varIdentifier = t.identifier(deobfuscateData[name].obfuscate);
+
+        if (!isEnum(name) || isNative(name)) {
+            node.push(t.expressionStatement(
+                t.assignmentExpression(
+                    "=",
+                    varIdentifier,
+                    t.callExpression(
+                        t.identifier("constructorDefined"),
+                        [
+                            t.stringLiteral(name),
+                            varIdentifier
+                        ]
+                    )
+                )
+            ));
+        }
+
+        node.splice(1, 0, t.assignmentExpression(
+            "=",
+            AstUtil.unsafeIdentifier(name),
+            varIdentifier
+        ));
+        node.push(t.callExpression(
+            t.identifier("referenceDefined"),
+            [
+                t.stringLiteral(name)
+            ]
+        ));
+    }
+    iterateOrder() {
+        for (const name of order) this.loop(name);
+    }
+    addNode(name, ...args) {
+        const deobfuscate = renameMap[name] || name;
+        if (!this.referenceNodes[deobfuscate]) this.referenceNodes[deobfuscate] = [];
+        this.referenceNodes[deobfuscate].push(...args);
+    }
     static rename(path, oldName, newName) {
         const binding = path.scope.getBinding(oldName);
         if (!binding) return;
@@ -15,6 +60,12 @@ class AstUtil {
         for (const ref of binding.referencePaths) {
             ref.node.name = newName;
         }
+    }
+    static getKeyNodes(mineblocksAST) {
+        const $lime_init = mineblocksAST.program.body[37].declarations[0].init.body;
+        const varD = $lime_init.body[0];
+        const iife = varD.declarations[0].init.body.body[0].expression.callee.body;
+        return { $lime_init, varD, iife }
     }
     static unsafeIdentifier(name) {
         const node = t.identifier("_");
@@ -25,71 +76,6 @@ class AstUtil {
         const ast = parser.parse("", { sourceType: "module" });
         ast.program.body = array;
         return ast;
-    }
-    static isClass(name) {
-        const deobfuscate = renameMap[name] || name;
-        if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "class") return true;
-    }
-    static isEnum(name) {
-        const deobfuscate = renameMap[name] || name;
-        if (deobfuscateData[deobfuscate] && deobfuscateData[deobfuscate].type === "enum") return true;
-    }
-    constructor(mineblocksCode) {
-        this.mineblocksAST = parser.parse(mineblocksCode);
-        this.$lime_init = this.mineblocksAST.program.body[37].declarations[0].init.body;
-        this.varD = this.$lime_init.body[0];
-        this.iife = this.varD.declarations[0].init.body.body[0].expression.callee.body;
-        this.referenceNodes = {};
-        this.ast = AstUtil.getAST(this.iife.body);
-        const astUtil = this;
-        this.traverseOpts = {
-            VariableDeclarator(path) {
-                if (path.scope.parent) return;
-                const varName = path.node.id.name;
-                if (AstUtil.isEnum(varName) || AstUtil.isClass(varName)) {
-                    astUtil.referenceFound(path, varName);
-                    if (path.parentPath.node.declarations.length > 1) {
-                        path.remove();
-                    } else {
-                        path.parentPath.remove();
-                    }
-                }
-            },
-            AssignmentExpression(path) {
-                if (path.scope.parent) return;
-                const right = path.node.right;
-                const left = path.node.left;
-                if (left.type === "MemberExpression") {
-                    const objectName = left.object.name;
-                    if (AstUtil.isEnum(objectName) || AstUtil.isClass(objectName)) {
-                        astUtil.addNode(objectName, path.node);
-                        path.parentPath.remove();
-                    }
-                    if (objectName === "m") {
-                        astUtil.addNode(right.name, path.node);
-                        path.parentPath.remove();
-                    }
-                }
-            }
-        }
-    }
-    referenceFound(path, varName) {
-        this.addNode(varName, t.variableDeclaration("var", [path.node]));
-    }
-    getReferenceString(name) {
-        const ast = AstUtil.getAST(this.referenceNodes[name]);
-        return generator(ast).code;
-    }
-    process() {
-        traverse(this.ast, this.traverseOpts);
-        for (const name of order) {
-            this.loop(name)
-        }
-    }
-    addNode(name, node) {
-        const deobfuscate = renameMap[name] || name;
-        if (!this.referenceNodes[deobfuscate]) this.referenceNodes[deobfuscate] = [];
-        this.referenceNodes[deobfuscate].push(node);
     }
 }
 

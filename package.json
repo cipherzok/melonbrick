@@ -1,30 +1,34 @@
 {
-  "name": "melonbrick",
-  "version": "1.0.0",
-  "description": "Mine Blocks mod loader based on the web version.",
-  "main": "main.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cipherzok/melonbrick.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/cipherzok/melonbrick/issues"
-  },
-  "homepage": "https://github.com/cipherzok/melonbrick#readme",
-  "dependencies": {
-    "@babel/generator": "^8.0.0",
-    "@babel/parser": "^8.0.4",
-    "@babel/traverse": "^8.0.4",
-    "@babel/types": "^8.0.4"
-  }
+    "name": "melonbrick",
+    "version": "1.0.0",
+    "description": "Mine Blocks mod loader based on the web version.",
+    "main": "main.js",
+    "directories": {
+        "test": "test"
+    },
+    "bin": {
+        "melonbrick": "./cli.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cipherzok/melonbrick.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/cipherzok/melonbrick/issues"
+    },
+    "homepage": "https://github.com/cipherzok/melonbrick#readme",
+    "dependencies": {
+        "@babel/generator": "^8.0.0",
+        "@babel/parser": "^8.0.4",
+        "@babel/traverse": "^8.0.4",
+        "@babel/types": "^8.0.4",
+        "diff": "^9.0.0"
+    },
+    "devDependencies": {
+        "prettier": "^3.9.8"
+    }
 }
