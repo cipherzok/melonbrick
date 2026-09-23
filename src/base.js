@@ -40,14 +40,19 @@ class Base extends AstUtil {
                         path.parentPath.remove();
                     }
                     if (objectName === "m") {
-                        path.replaceWith(t.expressionStatement(path.node));
-                        if (right.name === "String" || right.name === "Date") {
-                            astUtil.addNode(right.name, path.parentPath.node);
+                        astUtil.addNode(right.name, t.expressionStatement(path.node));
+                        const parentType = path.parentPath.node.type;
+                        if (parentType === "ObjectProperty") {
+                            path.replaceWith(right);
+                            astUtil.addNode(right.name, path.parentPath.parentPath.parentPath.parentPath.node);
+                            path.parentPath.parentPath.parentPath.parentPath.remove();
+                        } else if (parentType === "AssignmentExpression") {
+                            path.replaceWith(right);
+                            astUtil.addNode(right.name, path.parentPath.parentPath.node);
                             path.parentPath.parentPath.remove();
                         } else {
                             path.parentPath.remove();
                         }
-                        astUtil.addNode(right.name, path.parentPath.node);
                     }
                 }
             }

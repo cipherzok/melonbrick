@@ -3,5 +3,4 @@ mine-blocks/
 Mine Blocks.js
 dist/
 decompiled/
-patch-base/
-bundle.js
+bundle.patch

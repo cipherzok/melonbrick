@@ -15,6 +15,7 @@ const order = require("./src/order.json");
 const { default: generate } = require("@babel/generator");
 
 const mineblocksCode = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
+const melonbrickCode = fs.readFileSync(path.join("src", "melonbrick.js"), { encoding: "utf8" });
 
 const deobfuscateData = {};
 const renameMap = {};
@@ -125,7 +126,6 @@ const commands = {
         bundler.iterateOrder();
         bundler.process();
 
-        const melonbrickCode = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
         const injector = new Injector(mineblocksCode, melonbrickCode);
         injector.process();
         injector.iterateOrder();
@@ -135,9 +135,22 @@ const commands = {
 
         const patch = Diff.createPatch("bundle.js", original, edited);
 
-        fs.writeFileSync(path.join("src", "bundle.patch"), patch);
+        fs.writeFileSync(path.join("bundle.patch"), patch);
+    },
+    test: () => {
+        const bundler = new Bundler();
+        bundler.iterateOrder();
+        bundler.process();
+
+        const injector = new Injector(mineblocksCode, melonbrickCode);
+        injector.process();
+        injector.iterateOrder();
+
+        injector.bundle = bundler.bundle;
 
         injector.end();
+        fs.writeFileSync(path.join("mine-blocks", "Mine Blocks.js"), injector.mainCode);
+        fs.writeFileSync(path.join("mine-blocks", "init.js"), injector.initCode);
     }
 }
 

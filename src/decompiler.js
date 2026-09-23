@@ -1,5 +1,4 @@
 const t = require("@babel/types");
-const prettier = require("prettier");
 
 const Base = require("./base");
 const AstUtil = require("./ast-util");
@@ -26,10 +25,6 @@ class Decompiler extends Base {
     }
     async loop(name) {
         const output = this.getReferenceString(name);
-        const formatted = await prettier.format(output, {
-            parser: "babel",
-            tabWidth: 4
-        });
         this.done(name, output);
     }
 }
