@@ -1,5 +1,9 @@
 window.melonbrick = {}
 
+melonbrick.version = "2.0.0";
+
+melonbrick.exports = {};
+
 const waitingConstructor = {};
 const waitingReference = {};
 
@@ -103,10 +107,46 @@ async function loadMods() {
     const res = await fetch("mods.json");
     const text = await res.text();
     const modFolders = JSON.parse(text);
-    for (const folder of modFolders) {
-        await import("./mods/" + folder + "/main.js");
+    for (const id of modFolders) {
+        await loadMod(id);
     }
     window.lime.embed("Mine Blocks", "content", 0, 0);
+}
+
+async function loadMod(id) {
+    if (!loaded[id]) {
+        const path = "/mods/" + id + "/";
+        const res = await fetch(path + "mod.json");
+        const text = await res.text();
+        const mod = JSON.parse(text);
+        if (!areCompatible(mod.melonbrick, melonbrick.version)) {
+            console.log(`Required melonbrick v${mod.melonbrick} by ${id} is incompatible with v${melonbrick.version}`);
+            return;
+        }
+        for (const dependency in mod.dependencies) {
+            const current = await loadMod(dependency);
+            const required = mod.dependencies[dependency];
+            if (!areCompatible(current, required)) {
+                console.log(`Required ${dependency} v${required} by ${id} is incompatible with v${current}`);
+                return;
+            }
+        }
+        const module = await import(path + mod.entry);
+        melonbrick.exports[id] = module.default;
+        loaded[id] = mod.version;
+    }
+    return loaded[id];
+}
+
+const loaded = {};
+
+function areCompatible(current, required) {
+    current = current.split(".").map(Number);
+    required = required.split(".").map(Number);
+    if (required[0] !== current[0]) return false;
+    if (required[1] > current[1]) return false;
+    if (required[1] === current[1] && required[2] > current[2]) return false;
+    return true;
 }
 
 loadMods();
