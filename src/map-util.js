@@ -1,22 +1,20 @@
-const deobfuscateData = require("./deobfuscate-data.json");
-const renameMap = require("./rename-map.json");
+import deobfuscateData from "./deobfuscate-data.json" with { type: "json" };
+import renameMap from "./rename-map.json" with { type: "json" };
 
-function isClass(name) {
+export function isClass(name) {
     return getData(name, "type") === "class";
 }
 
-function isEnum(name) {
+export function isEnum(name) {
     return getData(name, "type") === "enum";
 }
 
-function isNative(name) {
+export function isNative(name) {
     return getData(name, "isNative") === true;
 }
 
-function getData(name, key) {
+export function getData(name, key) {
     const deobfuscate = renameMap[name] || name;
     const data = deobfuscateData[deobfuscate];
     if (data) return data[key];
 }
-
-module.exports = { isClass, isEnum, isNative }

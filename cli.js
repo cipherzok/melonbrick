@@ -1,18 +1,16 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const Diff = require("diff");
-const parser = require("@babel/parser");
-const generator = require("@babel/generator").default
+import fs from "fs";
+import path from "path";
+import { createPatch, applyPatch } from "diff";
+import { parser, generator } from "./src/dependencies.js";
 
-const Decompiler = require("./src/decompiler");
-const Injector = require("./src/injector");
-const AstUtil = require("./src/ast-util");
-const Bundler = require("./src/bundler");
+import Decompiler from "./src/decompiler.js";
+import Injector from "./src/injector.js";
+import AstUtil from "./src/ast-util.js";
+import Bundler from "./src/bundler.js";
 
-const order = require("./src/order.json");
-const { default: generate } = require("@babel/generator");
+import order from "./src/order.json" with { type: "json" };
 
 const mineblocksCode = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
 const melonbrickCode = fs.readFileSync(path.join("src", "melonbrick.js"), { encoding: "utf8" });
@@ -64,7 +62,7 @@ const commands = {
 
                 fs.mkdirSync(dir, { recursive: true });
 
-                const patch = Diff.createPatch(fileName + ".js", original, edited);
+                const patch = createPatch(fileName + ".js", original, edited);
 
                 fs.writeFileSync(path.join(dir, fileName + ".patch"), patch);
             }
@@ -112,7 +110,7 @@ const commands = {
                 const sourcePath = path.join("decompiled", ...parts, fileName + ".js");
                 const patch = fs.readFileSync(patchPath, { encoding: "utf8" });
                 const source = fs.readFileSync(sourcePath, { encoding: "utf8" });
-                const result = Diff.applyPatch(source, patch);
+                const result = applyPatch(source, patch);
                 if (result === false) {
                     console.log("Patch could not be applied: " + patchPath)
                 } else {
@@ -130,10 +128,10 @@ const commands = {
         injector.process();
         injector.iterateOrder();
 
-        const edited = generate(AstUtil.getAST(bundler.bundle)).code;
-        const original = generate(AstUtil.getAST(injector.bundle)).code;
+        const edited = generator(AstUtil.getAST(bundler.bundle)).code;
+        const original = generator(AstUtil.getAST(injector.bundle)).code;
 
-        const patch = Diff.createPatch("bundle.js", original, edited);
+        const patch = createPatch("bundle.js", original, edited);
 
         fs.writeFileSync(path.join("bundle.patch"), patch);
     },

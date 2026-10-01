@@ -1,15 +1,12 @@
-const fs = require("fs");
-const path = require("path");
-const traverse = require("@babel/traverse").default;
-const parser = require("@babel/parser");
-const t = require("@babel/types");
+import fs from "fs";
+import path from "path";
 
-const AstUtil = require("./ast-util");
+import { traverse, parser, types as t} from "./dependencies.js";
 
-const deobfuscateData = require("./deobfuscate-data.json");
-const { default: generate } = require("@babel/generator");
+import AstUtil from "./ast-util.js";
+import deobfuscateData from "./deobfuscate-data.json" with { type: "json" };
 
-class Bundler extends AstUtil {
+export default class Bundler extends AstUtil {
     constructor() {
         super();
         this.root = {};
@@ -77,5 +74,3 @@ class Bundler extends AstUtil {
         this.injectReference(reference);
     }
 }
-
-module.exports = Bundler;

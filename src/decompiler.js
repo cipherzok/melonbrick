@@ -1,11 +1,9 @@
-const t = require("@babel/types");
+import { types as t } from "./dependencies.js";
+import Base from "./base.js";
+import AstUtil from "./ast-util.js";
+import renameMap from "./rename-map.json" with { type: "json" };
 
-const Base = require("./base");
-const AstUtil = require("./ast-util");
-
-const renameMap = require("./rename-map.json");
-
-class Decompiler extends Base {
+export default class Decompiler extends Base {
     constructor(mineblocksCode) {
         super(mineblocksCode);
         this.traverseOpts.Program = function (path) {
@@ -28,5 +26,3 @@ class Decompiler extends Base {
         this.done(name, output);
     }
 }
-
-module.exports = Decompiler;

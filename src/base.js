@@ -1,12 +1,9 @@
-const generator = require("@babel/generator").default;
-const t = require("@babel/types");
-const traverse = require("@babel/traverse").default;
-const parser = require("@babel/parser");
+import { generator, types as t, traverse, parser } from "./dependencies.js";
 
-const AstUtil = require("./ast-util")
-const { isClass, isEnum } = require("./map-util");
+import AstUtil from "./ast-util.js";
+import { isClass, isEnum } from "./map-util.js";
 
-class Base extends AstUtil {
+export default class Base extends AstUtil {
     constructor(mineblocksCode) {
         super();
         this.mineblocksAST = parser.parse(mineblocksCode);
@@ -69,5 +66,3 @@ class Base extends AstUtil {
         return generator(ast).code;
     }
 }
-
-module.exports = Base;

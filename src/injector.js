@@ -1,13 +1,9 @@
-const t = require("@babel/types");
-const generator = require("@babel/generator").default;
-const parser = require("@babel/parser");
+import { types as t, generator, parser } from "./dependencies.js";
+import AstUtil from "./ast-util.js";
+import Base from "./base.js";
+import { isNative } from "./map-util.js";
 
-const AstUtil = require("./ast-util")
-const Base = require("./base")
-
-const { isClass, isNative } = require("./map-util");
-
-class Injector extends Base {
+export default class Injector extends Base {
     constructor(mineblocksCode, melonbrickCode) {
         super(mineblocksCode);
         this.melonbrickAST = parser.parse(melonbrickCode);
@@ -69,5 +65,3 @@ class Injector extends Base {
         }
     }
 }
-
-module.exports = Injector;

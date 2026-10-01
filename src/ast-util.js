@@ -1,12 +1,14 @@
-const parser = require("@babel/parser");
-const t = require("@babel/types");
-const renameMap = require("./rename-map.json");
-const { isNative, isEnum } = require("./map-util")
+import { parser, types as t } from "./dependencies.js";
 
-const deobfuscateData = require("./deobfuscate-data.json");
-const order = require("./order.json");
+import renameMap from "./rename-map.json" with { type: "json" };
 
-class AstUtil {
+import { isNative, isEnum } from "./map-util.js";
+
+import deobfuscateData from "./deobfuscate-data.json" with { type: "json" };
+
+import order from "./order.json" with { type: "json" };
+
+export default class AstUtil {
     constructor(mineblocksCode) {
         this.referenceNodes = {};
     }
@@ -78,5 +80,3 @@ class AstUtil {
         return ast;
     }
 }
-
-module.exports = AstUtil;
