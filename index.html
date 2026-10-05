@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>melonbrick 2.0.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/diff@9.0.0/dist/diff.min.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder preview-icon">
+            <path
+                d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-folder preview-icon">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+        </symbol>
+    </svg>
+    <div class="main">
+        <h1>Mine Blocks 1.31.2</h1>
+
+        <div class="row">
+            <label>Launcher</label>
+            <select id="launcher">
+                <option>None</option>
+                <option>Windows x64</option>
+            </select>
+        </div>
+        <div class="row">
+            <label>Assets</label>
+            <div class="path">
+                <span id="assets-path"
+                    title="https://web.archive.org/web/20250901222439id_/https://mineblocks.com/1/Mine-Blocks-32bit.zip">https://web.archive.org/web/20250901222439id_/https://mineblocks.com/1/Mine-Blocks-32bit.zip</span>
+            </div>
+            <svg class="icon" id="assets-folder">
+                <use href="#folder" />
+            </svg>
+            <svg class="icon" id="assets-reset">
+                <use href="#reset" />
+            </svg>
+        </div>
+        <div class="row">
+            <label>Script</label>
+            <div class="path">
+                <span id="script-path"
+                    title="https://web.archive.org/web/20260123072208id_/https://mineblocks.com/1/embed/html5//Mine%20Blocks.js?1735551513">https://web.archive.org/web/20260123072208id_/https://mineblocks.com/1/embed/html5//Mine%20Blocks.js?1735551513</span>
+            </div>
+            <svg class="icon" id="script-folder">
+                <use href="#folder" />
+            </svg>
+            <svg class="icon" id="script-reset">
+                <use href="#reset" />
+            </svg>
+        </div>
+        <div class="center-box">
+            <button id="download">Download</button>
+        </div>
+        <p id="log"></p>
+    </div>
+</body>
+
+</html>
