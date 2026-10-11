@@ -115,7 +115,7 @@ async function loadMods() {
 
 async function loadMod(id) {
     if (!loaded[id]) {
-        const path = "/mods/" + id + "/";
+        const path = "./mods/" + id + "/";
         const res = await fetch(path + "mod.json");
         const text = await res.text();
         const mod = JSON.parse(text);

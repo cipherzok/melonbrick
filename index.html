@@ -11,56 +11,51 @@
 <body>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/diff@9.0.0/dist/diff.min.js"></script>
+    <script src="jszip.js"></script>
+    <script src="diff.js"></script>
+    <script src="main.js" type="module"></script>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder preview-icon">
+        <symbol id="file-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-down preview-icon">
             <path
-                d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
+                d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+            <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+            <path d="M12 12v6" />
+            <path d="m15 15-3-3-3 3" />
         </symbol>
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-folder preview-icon">
-            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-            <path d="M3 3v5h5" />
-        </symbol>
-    </svg>
+
     <div class="main">
         <h1>Mine Blocks 1.31.2</h1>
 
         <div class="row">
             <label>Launcher</label>
-            <select id="launcher">
+            <select id="select-launcher">
                 <option>None</option>
                 <option>Windows x64</option>
             </select>
         </div>
+
         <div class="row">
-            <label>Assets</label>
-            <div class="path">
-                <span id="assets-path"
-                    title="https://web.archive.org/web/20250901222439id_/https://mineblocks.com/1/Mine-Blocks-32bit.zip">https://web.archive.org/web/20250901222439id_/https://mineblocks.com/1/Mine-Blocks-32bit.zip</span>
+            <label>32-bit EXE</label>
+            <div class="import-file" id="import-exe">
+                <svg class="icon">
+                    <use href="#file-down" />
+                </svg>
+                <p id="exe-file-name">No file selected</p>
             </div>
-            <svg class="icon" id="assets-folder">
-                <use href="#folder" />
-            </svg>
-            <svg class="icon" id="assets-reset">
-                <use href="#reset" />
-            </svg>
         </div>
+
         <div class="row">
-            <label>Script</label>
-            <div class="path">
-                <span id="script-path"
-                    title="https://web.archive.org/web/20260123072208id_/https://mineblocks.com/1/embed/html5//Mine%20Blocks.js?1735551513">https://web.archive.org/web/20260123072208id_/https://mineblocks.com/1/embed/html5//Mine%20Blocks.js?1735551513</span>
+            <label>JavaScript</label>
+            <div class="import-file" id="import-js">
+                <svg class="icon">
+                    <use href="#file-down" />
+                </svg>
+                <p id="js-file-name">No file selected</p>
             </div>
-            <svg class="icon" id="script-folder">
-                <use href="#folder" />
-            </svg>
-            <svg class="icon" id="script-reset">
-                <use href="#reset" />
-            </svg>
         </div>
+
         <div class="center-box">
             <button id="download">Download</button>
         </div>

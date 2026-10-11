@@ -25,6 +25,7 @@ body {
     padding: 10px;
     padding-left: 40px;
     padding-right: 40px;
+    cursor: pointer;
 }
 
 #download:hover {
@@ -37,7 +38,6 @@ select {
     color: #E6EDF3;
     border: none;
     height: 100%;
-    font-family: sans-serif;
     border-radius: 5px;
     text-align: center;
     padding: 10px;
@@ -45,7 +45,7 @@ select {
 }
 
 .row {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     display: flex;
     align-items: center;
     height: 40px;
@@ -79,35 +79,29 @@ h1 {
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
-    padding: 4px;
-    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    margin-left: 4px;
 }
 
-.icon:hover {
-    background-color: #30363D;
-}
-
-.path {
+.import-file {
     box-sizing: border-box;
-    padding: 10px;
+    cursor: pointer;
+    background-color: #21262D;
+    color: #E6EDF3;
     height: 100%;
-    min-width: 0;
     display: flex;
     align-items: center;
-    text-align: center;
-    margin-right: 10px;
-    background-color: #21262D;
-    color: #8B949E;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    border-radius: 5px;
+    flex: 1;
 }
 
-.path span {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+#exe-file-name, #js-file-name {
+    flex: 1;
+    color: #8B949E;
+    text-align: center;
+}
+
+.import-file:hover {
+    background-color: #30363D;
 }
