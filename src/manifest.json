@@ -1,0 +1,1319 @@
+{
+    "assets/fonts/basis33.png": {
+        "size": 2137,
+        "position": 15,
+        "address": 11596844
+    },
+    "assets/fonts/volter.png": {
+        "size": 1891,
+        "position": 2161,
+        "address": 14453308
+    },
+    "assets/images/backgrounds/background_trees.png": {
+        "size": 166844,
+        "position": 4075,
+        "address": 24560700
+    },
+    "assets/images/backgrounds/ender_bg.png": {
+        "size": 2760463,
+        "position": 168420,
+        "address": 14455204
+    },
+    "assets/images/backgrounds/main_menu_bg.png": {
+        "size": 125570,
+        "position": 2929746,
+        "address": 17226204
+    },
+    "assets/images/backgrounds/nether_bg.png": {
+        "size": 67363,
+        "position": 3055056,
+        "address": 20880868
+    },
+    "assets/images/branding/mbb_icon.png": {
+        "size": 709,
+        "position": 3122462,
+        "address": 19693476
+    },
+    "assets/images/branding/title_logo.png": {
+        "size": 40054,
+        "position": 3123194,
+        "address": 24866852
+    },
+    "assets/images/branding/zanzlanz_title.png": {
+        "size": 7323,
+        "position": 3162427,
+        "address": 21232772
+    },
+    "assets/images/ui/achievements.png": {
+        "size": 387,
+        "position": 3169773,
+        "address": 17601516
+    },
+    "assets/images/ui/boss_bar.png": {
+        "size": 215,
+        "position": 3170137,
+        "address": 24454764
+    },
+    "assets/images/ui/diamond_burst.png": {
+        "size": 109750,
+        "position": 3170373,
+        "address": 13915700
+    },
+    "assets/images/ui/effects.png": {
+        "size": 3071,
+        "position": 3279833,
+        "address": 19580996
+    },
+    "assets/images/ui/hotbar.png": {
+        "size": 288,
+        "position": 3282927,
+        "address": 22111620
+    },
+    "assets/images/ui/inventory.png": {
+        "size": 505,
+        "position": 3283234,
+        "address": 24049988
+    },
+    "assets/images/ui/inventory_anvil.png": {
+        "size": 635,
+        "position": 3283691,
+        "address": 23160556
+    },
+    "assets/images/ui/inventory_armor.png": {
+        "size": 301,
+        "position": 3284349,
+        "address": 17553852
+    },
+    "assets/images/ui/inventory_brewing.png": {
+        "size": 1597,
+        "position": 3284671,
+        "address": 17558796
+    },
+    "assets/images/ui/inventory_chest.png": {
+        "size": 357,
+        "position": 3286291,
+        "address": 24439012
+    },
+    "assets/images/ui/inventory_crafting.png": {
+        "size": 307,
+        "position": 3286644,
+        "address": 23161196
+    },
+    "assets/images/ui/inventory_craftingtable.png": {
+        "size": 351,
+        "position": 3286974,
+        "address": 10767940
+    },
+    "assets/images/ui/inventory_creative.png": {
+        "size": 1239,
+        "position": 3287335,
+        "address": 12020764
+    },
+    "assets/images/ui/inventory_enchanting.png": {
+        "size": 274,
+        "position": 3288390,
+        "address": 19527412
+    },
+    "assets/images/ui/inventory_enchantment_button.png": {
+        "size": 1828,
+        "position": 3288612,
+        "address": 21295412
+    },
+    "assets/images/ui/inventory_furnace.png": {
+        "size": 459,
+        "position": 3290407,
+        "address": 11533964
+    },
+    "assets/images/ui/inventory_single.png": {
+        "size": 157,
+        "position": 3290885,
+        "address": 11589708
+    },
+    "assets/images/ui/pick_crack.png": {
+        "size": 1185,
+        "position": 3291060,
+        "address": 23277788
+    },
+    "assets/images/ui/reticle.png": {
+        "size": 150,
+        "position": 3292268,
+        "address": 11726692
+    },
+    "assets/images/ui/sign.png": {
+        "size": 934,
+        "position": 3292435,
+        "address": 21497628
+    },
+    "assets/images/ui/skin_upload_progress.png": {
+        "size": 1706,
+        "position": 3293379,
+        "address": 19694196
+    },
+    "assets/images/ui/spinning_diamond.png": {
+        "size": 6897,
+        "position": 3295108,
+        "address": 11534428
+    },
+    "assets/images/ui/stone_brick_blur.png": {
+        "size": 1161,
+        "position": 3302009,
+        "address": 17215676
+    },
+    "assets/images/ui/things_to_other_places.png": {
+        "size": 10958,
+        "position": 3303193,
+        "address": 24938052
+    },
+    "assets/images/ui/trash_bin.png": {
+        "size": 354,
+        "position": 3313971,
+        "address": 21058540
+    },
+    "assets/images/ui/ui.png": {
+        "size": 35821,
+        "position": 3314348,
+        "address": 23009884
+    },
+    "assets/images/world/balloon.png": {
+        "size": 663,
+        "position": 3346885,
+        "address": 20948236
+    },
+    "assets/images/world/blocks.json": {
+        "size": 35517,
+        "position": 3347571,
+        "address": 19657948
+    },
+    "assets/images/world/blocks.png": {
+        "size": 142048,
+        "position": 3352625,
+        "address": 14187676
+    },
+    "assets/images/world/bobber.png": {
+        "size": 139,
+        "position": 3493670,
+        "address": 17554164
+    },
+    "assets/images/world/dirt_ball.png": {
+        "size": 370,
+        "position": 3493827,
+        "address": 11641612
+    },
+    "assets/images/world/ehc.png": {
+        "size": 4482,
+        "position": 3494220,
+        "address": 17554308
+    },
+    "assets/images/world/enchantment_glint.png": {
+        "size": 20452,
+        "position": 3498725,
+        "address": 24454988
+    },
+    "assets/images/world/end_portal.png": {
+        "size": 544,
+        "position": 3519205,
+        "address": 21660252
+    },
+    "assets/images/world/flameball.png": {
+        "size": 666,
+        "position": 3519772,
+        "address": 24157548
+    },
+    "assets/images/world/frank.png": {
+        "size": 1581,
+        "position": 3520461,
+        "address": 24913916
+    },
+    "assets/images/world/mobs.png": {
+        "size": 25996,
+        "position": 3522065,
+        "address": 23251780
+    },
+    "assets/images/world/particles.png": {
+        "size": 6452,
+        "position": 3547815,
+        "address": 23860660
+    },
+    "assets/images/world/pumpkin_overlay.png": {
+        "size": 34358,
+        "position": 3554268,
+        "address": 10768300
+    },
+    "assets/images/world/raything.png": {
+        "size": 7561,
+        "position": 3588536,
+        "address": 23080140
+    },
+    "assets/images/world/stars.png": {
+        "size": 3746,
+        "position": 3596120,
+        "address": 9609796
+    },
+    "assets/images/world/sun_and_moon.png": {
+        "size": 2901,
+        "position": 3599889,
+        "address": 21444100
+    },
+    "assets/images/world/teleporter.png": {
+        "size": 4910,
+        "position": 3602813,
+        "address": 12022012
+    },
+    "assets/images/zanzlanz.png": {
+        "size": 2912,
+        "position": 3607746,
+        "address": 18475636
+    },
+    "assets/sfx/ambience/enderbg.mp3": {
+        "size": 567794,
+        "address": 10845636
+    },
+    "assets/sfx/ambience/fire1.mp3": {
+        "size": 51295,
+        "address": 11726852
+    },
+    "assets/sfx/ambience/fire2.mp3": {
+        "size": 62710,
+        "address": 9613548
+    },
+    "assets/sfx/ambience/fire3.mp3": {
+        "size": 58296,
+        "address": 23278980
+    },
+    "assets/sfx/ambience/fire4.mp3": {
+        "size": 59437,
+        "address": 18599788
+    },
+    "assets/sfx/ambience/fire5.mp3": {
+        "size": 66196,
+        "address": 21866260
+    },
+    "assets/sfx/ambience/nether.mp3": {
+        "size": 332037,
+        "address": 23528612
+    },
+    "assets/sfx/ambience/portal1.mp3": {
+        "size": 67356,
+        "address": 22036972
+    },
+    "assets/sfx/ambience/portal2.mp3": {
+        "size": 38930,
+        "address": 18478556
+    },
+    "assets/sfx/ambience/portal3.mp3": {
+        "size": 84887,
+        "address": 19349388
+    },
+    "assets/sfx/ambience/portal4.mp3": {
+        "size": 65518,
+        "address": 23087708
+    },
+    "assets/sfx/ambience/portal5.mp3": {
+        "size": 56117,
+        "address": 20948908
+    },
+    "assets/sfx/ambience/rainsound.mp3": {
+        "size": 86177,
+        "address": 14367124
+    },
+    "assets/sfx/ambience/underwater.mp3": {
+        "size": 45299,
+        "address": 23483308
+    },
+    "assets/sfx/blocks/anvilsound.mp3": {
+        "size": 17823,
+        "address": 17491292
+    },
+    "assets/sfx/blocks/crunch1.mp3": {
+        "size": 9972,
+        "address": 22980644
+    },
+    "assets/sfx/blocks/crunch2.mp3": {
+        "size": 8895,
+        "address": 24148644
+    },
+    "assets/sfx/blocks/crunch3.mp3": {
+        "size": 9349,
+        "address": 17216844
+    },
+    "assets/sfx/blocks/doorclose.mp3": {
+        "size": 9573,
+        "address": 21214204
+    },
+    "assets/sfx/blocks/dooropen.mp3": {
+        "size": 6973,
+        "address": 9487476
+    },
+    "assets/sfx/blocks/glass1.mp3": {
+        "size": 16395,
+        "address": 10829236
+    },
+    "assets/sfx/blocks/glass2.mp3": {
+        "size": 24429,
+        "address": 24171036
+    },
+    "assets/sfx/blocks/glass3.mp3": {
+        "size": 23620,
+        "address": 19503780
+    },
+    "assets/sfx/blocks/noteblocks/bass1.mp3": {
+        "size": 7194,
+        "address": 24439380
+    },
+    "assets/sfx/blocks/noteblocks/bass10.mp3": {
+        "size": 7081,
+        "address": 12838236
+    },
+    "assets/sfx/blocks/noteblocks/bass11.mp3": {
+        "size": 6696,
+        "address": 18468932
+    },
+    "assets/sfx/blocks/noteblocks/bass12.mp3": {
+        "size": 7130,
+        "address": 21051404
+    },
+    "assets/sfx/blocks/noteblocks/bass13.mp3": {
+        "size": 7179,
+        "address": 14120748
+    },
+    "assets/sfx/blocks/noteblocks/bass14.mp3": {
+        "size": 6918,
+        "address": 21932468
+    },
+    "assets/sfx/blocks/noteblocks/bass15.mp3": {
+        "size": 7157,
+        "address": 20686652
+    },
+    "assets/sfx/blocks/noteblocks/bass16.mp3": {
+        "size": 7209,
+        "address": 21281044
+    },
+    "assets/sfx/blocks/noteblocks/bass17.mp3": {
+        "size": 7311,
+        "address": 23153236
+    },
+    "assets/sfx/blocks/noteblocks/bass18.mp3": {
+        "size": 7177,
+        "address": 23445684
+    },
+    "assets/sfx/blocks/noteblocks/bass19.mp3": {
+        "size": 6967,
+        "address": 21804292
+    },
+    "assets/sfx/blocks/noteblocks/bass2.mp3": {
+        "size": 7112,
+        "address": 22819420
+    },
+    "assets/sfx/blocks/noteblocks/bass20.mp3": {
+        "size": 7480,
+        "address": 19573508
+    },
+    "assets/sfx/blocks/noteblocks/bass21.mp3": {
+        "size": 7292,
+        "address": 21525356
+    },
+    "assets/sfx/blocks/noteblocks/bass22.mp3": {
+        "size": 7119,
+        "address": 19342260
+    },
+    "assets/sfx/blocks/noteblocks/bass23.mp3": {
+        "size": 6917,
+        "address": 11990316
+    },
+    "assets/sfx/blocks/noteblocks/bass24.mp3": {
+        "size": 6959,
+        "address": 11589876
+    },
+    "assets/sfx/blocks/noteblocks/bass25.mp3": {
+        "size": 7107,
+        "address": 19527692
+    },
+    "assets/sfx/blocks/noteblocks/bass3.mp3": {
+        "size": 7146,
+        "address": 21288260
+    },
+    "assets/sfx/blocks/noteblocks/bass4.mp3": {
+        "size": 7289,
+        "address": 19334964
+    },
+    "assets/sfx/blocks/noteblocks/bass5.mp3": {
+        "size": 7122,
+        "address": 10760812
+    },
+    "assets/sfx/blocks/noteblocks/bass6.mp3": {
+        "size": 7218,
+        "address": 24034540
+    },
+    "assets/sfx/blocks/noteblocks/bass7.mp3": {
+        "size": 6990,
+        "address": 24906916
+    },
+    "assets/sfx/blocks/noteblocks/bass8.mp3": {
+        "size": 6939,
+        "address": 10802668
+    },
+    "assets/sfx/blocks/noteblocks/bass9.mp3": {
+        "size": 7222,
+        "address": 14034228
+    },
+    "assets/sfx/blocks/noteblocks/kick.mp3": {
+        "size": 7638,
+        "address": 21407180
+    },
+    "assets/sfx/blocks/noteblocks/piano1.mp3": {
+        "size": 7901,
+        "address": 24009028
+    },
+    "assets/sfx/blocks/noteblocks/piano10.mp3": {
+        "size": 8037,
+        "address": 19446540
+    },
+    "assets/sfx/blocks/noteblocks/piano11.mp3": {
+        "size": 8119,
+        "address": 17638252
+    },
+    "assets/sfx/blocks/noteblocks/piano12.mp3": {
+        "size": 8125,
+        "address": 23161508
+    },
+    "assets/sfx/blocks/noteblocks/piano13.mp3": {
+        "size": 6620,
+        "address": 24727556
+    },
+    "assets/sfx/blocks/noteblocks/piano14.mp3": {
+        "size": 8412,
+        "address": 20719980
+    },
+    "assets/sfx/blocks/noteblocks/piano15.mp3": {
+        "size": 7959,
+        "address": 12785988
+    },
+    "assets/sfx/blocks/noteblocks/piano16.mp3": {
+        "size": 8058,
+        "address": 17468420
+    },
+    "assets/sfx/blocks/noteblocks/piano17.mp3": {
+        "size": 8087,
+        "address": 21604180
+    },
+    "assets/sfx/blocks/noteblocks/piano18.mp3": {
+        "size": 8134,
+        "address": 17351780
+    },
+    "assets/sfx/blocks/noteblocks/piano19.mp3": {
+        "size": 8035,
+        "address": 18460892
+    },
+    "assets/sfx/blocks/noteblocks/piano2.mp3": {
+        "size": 8079,
+        "address": 24495900
+    },
+    "assets/sfx/blocks/noteblocks/piano20.mp3": {
+        "size": 8212,
+        "address": 14047252
+    },
+    "assets/sfx/blocks/noteblocks/piano21.mp3": {
+        "size": 8023,
+        "address": 18591756
+    },
+    "assets/sfx/blocks/noteblocks/piano22.mp3": {
+        "size": 8215,
+        "address": 24041764
+    },
+    "assets/sfx/blocks/noteblocks/piano23.mp3": {
+        "size": 8331,
+        "address": 23001548
+    },
+    "assets/sfx/blocks/noteblocks/piano24.mp3": {
+        "size": 8242,
+        "address": 21489380
+    },
+    "assets/sfx/blocks/noteblocks/piano25.mp3": {
+        "size": 8893,
+        "address": 23973372
+    },
+    "assets/sfx/blocks/noteblocks/piano3.mp3": {
+        "size": 7884,
+        "address": 24949020
+    },
+    "assets/sfx/blocks/noteblocks/piano4.mp3": {
+        "size": 7932,
+        "address": 21447012
+    },
+    "assets/sfx/blocks/noteblocks/piano5.mp3": {
+        "size": 8217,
+        "address": 24520892
+    },
+    "assets/sfx/blocks/noteblocks/piano6.mp3": {
+        "size": 7960,
+        "address": 19695908
+    },
+    "assets/sfx/blocks/noteblocks/piano7.mp3": {
+        "size": 7903,
+        "address": 18659236
+    },
+    "assets/sfx/blocks/noteblocks/piano8.mp3": {
+        "size": 7980,
+        "address": 21174572
+    },
+    "assets/sfx/blocks/noteblocks/piano9.mp3": {
+        "size": 7905,
+        "address": 9676268
+    },
+    "assets/sfx/blocks/noteblocks/snare.mp3": {
+        "size": 7269,
+        "address": 22104340
+    },
+    "assets/sfx/blocks/off.mp3": {
+        "size": 6929,
+        "address": 24120740
+    },
+    "assets/sfx/blocks/on.mp3": {
+        "size": 6654,
+        "address": 20874204
+    },
+    "assets/sfx/blocks/pistonin.mp3": {
+        "size": 6562,
+        "address": 24751972
+    },
+    "assets/sfx/blocks/pistonout.mp3": {
+        "size": 8179,
+        "address": 24446580
+    },
+    "assets/sfx/blocks/sizzle.mp3": {
+        "size": 14592,
+        "address": 17539252
+    },
+    "assets/sfx/blocks/slimeblockjump.mp3": {
+        "size": 7161,
+        "address": 11983148
+    },
+    "assets/sfx/blocks/slimeblockland.mp3": {
+        "size": 10289,
+        "address": 17613236
+    },
+    "assets/sfx/blocks/smush.mp3": {
+        "size": 14473,
+        "address": 9587116
+    },
+    "assets/sfx/blocks/stone.mp3": {
+        "size": 12104,
+        "address": 12773876
+    },
+    "assets/sfx/blocks/water/splash.mp3": {
+        "size": 26751,
+        "address": 19584076
+    },
+    "assets/sfx/blocks/water/water1.mp3": {
+        "size": 35748,
+        "address": 11947388
+    },
+    "assets/sfx/blocks/water/water2.mp3": {
+        "size": 39004,
+        "address": 21939396
+    },
+    "assets/sfx/blocks/water/water3.mp3": {
+        "size": 43354,
+        "address": 21312068
+    },
+    "assets/sfx/blocks/water/water4.mp3": {
+        "size": 42146,
+        "address": 22854460
+    },
+    "assets/sfx/blocks/water/water5.mp3": {
+        "size": 44126,
+        "address": 12729740
+    },
+    "assets/sfx/blocks/water/water6.mp3": {
+        "size": 41102,
+        "address": 17560404
+    },
+    "assets/sfx/blocks/wood.mp3": {
+        "size": 18312,
+        "address": 14127932
+    },
+    "assets/sfx/entities/balloon1.mp3": {
+        "size": 7419,
+        "address": 12034692
+    },
+    "assets/sfx/entities/balloon2.mp3": {
+        "size": 7749,
+        "address": 12026932
+    },
+    "assets/sfx/entities/balloon3.mp3": {
+        "size": 7888,
+        "address": 21262172
+    },
+    "assets/sfx/entities/balloon4.mp3": {
+        "size": 7829,
+        "address": 21043564
+    },
+    "assets/sfx/entities/htele.mp3": {
+        "size": 13786,
+        "address": 11598988
+    },
+    "assets/sfx/entities/pop.mp3": {
+        "size": 4838,
+        "address": 12724892
+    },
+    "assets/sfx/entities/shurikenthrow.mp3": {
+        "size": 11311,
+        "address": 24127676
+    },
+    "assets/sfx/entities/teleporter.mp3": {
+        "size": 26815,
+        "address": 21811268
+    },
+    "assets/sfx/entities/throwsfx.mp3": {
+        "size": 9374,
+        "address": 21252788
+    },
+    "assets/sfx/entities/trrrr.mp3": {
+        "size": 14194,
+        "address": 14337852
+    },
+    "assets/sfx/items/bowsfx.mp3": {
+        "size": 10394,
+        "address": 19454588
+    },
+    "assets/sfx/items/firethrow.mp3": {
+        "size": 10515,
+        "address": 17509124
+    },
+    "assets/sfx/misc/boom.mp3": {
+        "size": 10103,
+        "address": 22911932
+    },
+    "assets/sfx/misc/fuse.mp3": {
+        "size": 28116,
+        "address": 13887572
+    },
+    "assets/sfx/misc/levelup.mp3": {
+        "size": 30473,
+        "address": 24090260
+    },
+    "assets/sfx/misc/orb1.mp3": {
+        "size": 15163,
+        "address": 24758540
+    },
+    "assets/sfx/misc/orb2.mp3": {
+        "size": 16545,
+        "address": 19556956
+    },
+    "assets/sfx/misc/orb3.mp3": {
+        "size": 16368,
+        "address": 11562076
+    },
+    "assets/sfx/misc/orb4.mp3": {
+        "size": 15889,
+        "address": 20323684
+    },
+    "assets/sfx/misc/orb5.mp3": {
+        "size": 16800,
+        "address": 22006100
+    },
+    "assets/sfx/misc/tp1.mp3": {
+        "size": 6574,
+        "address": 24734188
+    },
+    "assets/sfx/misc/tp2.mp3": {
+        "size": 7623,
+        "address": 9561156
+    },
+    "assets/sfx/mobs/bat/bathurt1.mp3": {
+        "size": 13035,
+        "address": 24475452
+    },
+    "assets/sfx/mobs/bat/bathurt2.mp3": {
+        "size": 12992,
+        "address": 11520964
+    },
+    "assets/sfx/mobs/bat/bathurt3.mp3": {
+        "size": 13094,
+        "address": 21355428
+    },
+    "assets/sfx/mobs/bat/bathurt4.mp3": {
+        "size": 13432,
+        "address": 24965828
+    },
+    "assets/sfx/mobs/bat/batidle1.mp3": {
+        "size": 16504,
+        "address": 23337284
+    },
+    "assets/sfx/mobs/bat/batidle2.mp3": {
+        "size": 14745,
+        "address": 21028812
+    },
+    "assets/sfx/mobs/bat/batidle3.mp3": {
+        "size": 16234,
+        "address": 21850020
+    },
+    "assets/sfx/mobs/bat/batidle4.mp3": {
+        "size": 15313,
+        "address": 22896612
+    },
+    "assets/sfx/mobs/bat/batidle5.mp3": {
+        "size": 16140,
+        "address": 20693820
+    },
+    "assets/sfx/mobs/blaze/blaze1.mp3": {
+        "size": 34415,
+        "address": 21454956
+    },
+    "assets/sfx/mobs/blaze/blaze2.mp3": {
+        "size": 38780,
+        "address": 19464988
+    },
+    "assets/sfx/mobs/blaze/blaze3.mp3": {
+        "size": 17592,
+        "address": 24016940
+    },
+    "assets/sfx/mobs/blaze/blaze4.mp3": {
+        "size": 31864,
+        "address": 9510212
+    },
+    "assets/sfx/mobs/blaze/blaze5.mp3": {
+        "size": 30102,
+        "address": 22111916
+    },
+    "assets/sfx/mobs/blaze/blazedeath.mp3": {
+        "size": 30429,
+        "address": 23452868
+    },
+    "assets/sfx/mobs/blaze/blazehurt1.mp3": {
+        "size": 8904,
+        "address": 24956916
+    },
+    "assets/sfx/mobs/blaze/blazehurt2.mp3": {
+        "size": 8973,
+        "address": 21223788
+    },
+    "assets/sfx/mobs/blaze/blazehurt3.mp3": {
+        "size": 12552,
+        "address": 11641988
+    },
+    "assets/sfx/mobs/chicken/chicken1.mp3": {
+        "size": 16046,
+        "address": 20658476
+    },
+    "assets/sfx/mobs/chicken/chicken2.mp3": {
+        "size": 13237,
+        "address": 11997244
+    },
+    "assets/sfx/mobs/chicken/chicken3.mp3": {
+        "size": 14056,
+        "address": 22022908
+    },
+    "assets/sfx/mobs/chicken/layegg.mp3": {
+        "size": 5452,
+        "address": 14352052
+    },
+    "assets/sfx/mobs/cow/cow1.mp3": {
+        "size": 11650,
+        "address": 11541332
+    },
+    "assets/sfx/mobs/cow/cow2.mp3": {
+        "size": 12828,
+        "address": 19633932
+    },
+    "assets/sfx/mobs/cow/cow3.mp3": {
+        "size": 12251,
+        "address": 19434284
+    },
+    "assets/sfx/mobs/cow/cow4.mp3": {
+        "size": 13402,
+        "address": 22967236
+    },
+    "assets/sfx/mobs/cow/cowhurt1.mp3": {
+        "size": 6999,
+        "address": 17519644
+    },
+    "assets/sfx/mobs/creeper/creeper1.mp3": {
+        "size": 11971,
+        "address": 19534804
+    },
+    "assets/sfx/mobs/creeper/creeper2.mp3": {
+        "size": 9528,
+        "address": 22957700
+    },
+    "assets/sfx/mobs/creeper/creeper3.mp3": {
+        "size": 9077,
+        "address": 11552988
+    },
+    "assets/sfx/mobs/creeper/creeper4.mp3": {
+        "size": 12363,
+        "address": 21201836
+    },
+    "assets/sfx/mobs/creeper/creeperdeath.mp3": {
+        "size": 8384,
+        "address": 17359924
+    },
+    "assets/sfx/mobs/enderman/endermanidle1.mp3": {
+        "size": 10582,
+        "address": 17368316
+    },
+    "assets/sfx/mobs/enderman/endermanidle2.mp3": {
+        "size": 13025,
+        "address": 23995996
+    },
+    "assets/sfx/mobs/enderman/endermanidle3.mp3": {
+        "size": 12605,
+        "address": 21669412
+    },
+    "assets/sfx/mobs/enderman/endermanidle4.mp3": {
+        "size": 12809,
+        "address": 24158220
+    },
+    "assets/sfx/mobs/enderman/endermanidle5.mp3": {
+        "size": 9637,
+        "address": 24138996
+    },
+    "assets/sfx/mobs/nethereye/nethereye1.mp3": {
+        "size": 11922,
+        "address": 21838092
+    },
+    "assets/sfx/mobs/nethereye/nethereye2.mp3": {
+        "size": 10730,
+        "address": 12804556
+    },
+    "assets/sfx/mobs/nethereye/nethereye3.mp3": {
+        "size": 13231,
+        "address": 14146252
+    },
+    "assets/sfx/mobs/nethereye/nethereye4.mp3": {
+        "size": 9810,
+        "address": 21182564
+    },
+    "assets/sfx/mobs/pig/pig1.mp3": {
+        "size": 8115,
+        "address": 14329732
+    },
+    "assets/sfx/mobs/pig/pig2.mp3": {
+        "size": 10969,
+        "address": 21270068
+    },
+    "assets/sfx/mobs/pig/pig3.mp3": {
+        "size": 11246,
+        "address": 11578452
+    },
+    "assets/sfx/mobs/pig/pig4.mp3": {
+        "size": 12594,
+        "address": 17526652
+    },
+    "assets/sfx/mobs/pig/pig5.mp3": {
+        "size": 11259,
+        "address": 17646380
+    },
+    "assets/sfx/mobs/player/drink1.mp3": {
+        "size": 17308,
+        "address": 11695620
+    },
+    "assets/sfx/mobs/player/drink2.mp3": {
+        "size": 18317,
+        "address": 9568788
+    },
+    "assets/sfx/mobs/player/eat1.mp3": {
+        "size": 10335,
+        "address": 11631268
+    },
+    "assets/sfx/mobs/player/eat2.mp3": {
+        "size": 11627,
+        "address": 12845324
+    },
+    "assets/sfx/mobs/player/eat3.mp3": {
+        "size": 13747,
+        "address": 11712940
+    },
+    "assets/sfx/mobs/player/eat4.mp3": {
+        "size": 8204,
+        "address": 23169644
+    },
+    "assets/sfx/mobs/player/ouch1.mp3": {
+        "size": 9200,
+        "address": 24543540
+    },
+    "assets/sfx/mobs/player/ouch2.mp3": {
+        "size": 14411,
+        "address": 21532660
+    },
+    "assets/sfx/mobs/rabbit/rabbithurt1.mp3": {
+        "size": 9075,
+        "address": 17378908
+    },
+    "assets/sfx/mobs/rabbit/rabbithurt2.mp3": {
+        "size": 8905,
+        "address": 21368532
+    },
+    "assets/sfx/mobs/rabbit/rabbithurt3.mp3": {
+        "size": 8763,
+        "address": 14025460
+    },
+    "assets/sfx/mobs/rabbit/rabbithurt4.mp3": {
+        "size": 9473,
+        "address": 9551676
+    },
+    "assets/sfx/mobs/sheep/sheep1.mp3": {
+        "size": 29263,
+        "address": 21414828
+    },
+    "assets/sfx/mobs/sheep/sheep2.mp3": {
+        "size": 22534,
+        "address": 24915508
+    },
+    "assets/sfx/mobs/sheep/sheep3.mp3": {
+        "size": 25981,
+        "address": 24050500
+    },
+    "assets/sfx/mobs/skeleton/skeleton1.mp3": {
+        "size": 14416,
+        "address": 24529116
+    },
+    "assets/sfx/mobs/skeleton/skeleton2.mp3": {
+        "size": 11195,
+        "address": 24740772
+    },
+    "assets/sfx/mobs/skeleton/skeleton3.mp3": {
+        "size": 10820,
+        "address": 20312852
+    },
+    "assets/sfx/mobs/skeleton/skeleton4.mp3": {
+        "size": 13434,
+        "address": 22142028
+    },
+    "assets/sfx/mobs/skeleton/skeletondeath.mp3": {
+        "size": 9634,
+        "address": 23436044
+    },
+    "assets/sfx/mobs/skeleton/skeletonhurt1.mp3": {
+        "size": 8724,
+        "address": 21020076
+    },
+    "assets/sfx/mobs/skeleton/skeletonhurt2.mp3": {
+        "size": 8599,
+        "address": 21660804
+    },
+    "assets/sfx/mobs/skeleton/skeletonhurt3.mp3": {
+        "size": 9346,
+        "address": 21302716
+    },
+    "assets/sfx/mobs/skeleton/skeletonhurt4.mp3": {
+        "size": 14797,
+        "address": 17476484
+    },
+    "assets/sfx/mobs/slime/slimejump1.mp3": {
+        "size": 9928,
+        "address": 19703876
+    },
+    "assets/sfx/mobs/slime/slimejump2.mp3": {
+        "size": 8893,
+        "address": 21398276
+    },
+    "assets/sfx/mobs/slime/slimeland1.mp3": {
+        "size": 10167,
+        "address": 19546780
+    },
+    "assets/sfx/mobs/slime/slimeland2.mp3": {
+        "size": 13761,
+        "address": 24076492
+    },
+    "assets/sfx/mobs/slime/slimeland3.mp3": {
+        "size": 14438,
+        "address": 21991652
+    },
+    "assets/sfx/mobs/slime/slimeland4.mp3": {
+        "size": 11917,
+        "address": 12712964
+    },
+    "assets/sfx/mobs/snowgolem/snowgolemhurt1.mp3": {
+        "size": 11151,
+        "address": 17457260
+    },
+    "assets/sfx/mobs/snowgolem/snowgolemhurt2.mp3": {
+        "size": 10493,
+        "address": 24321172
+    },
+    "assets/sfx/mobs/snowgolem/snowgolemhurt3.mp3": {
+        "size": 10638,
+        "address": 18581108
+    },
+    "assets/sfx/mobs/snowgolem/snowgolemhurt4.mp3": {
+        "size": 8188,
+        "address": 9601596
+    },
+    "assets/sfx/mobs/snowgolem/snowgolemhurt5.mp3": {
+        "size": 10593,
+        "address": 12793956
+    },
+    "assets/sfx/mobs/snowgolem/snowgolemhurt6.mp3": {
+        "size": 10792,
+        "address": 23045716
+    },
+    "assets/sfx/mobs/spider/spider1.mp3": {
+        "size": 9547,
+        "address": 19624380
+    },
+    "assets/sfx/mobs/spider/spider2.mp3": {
+        "size": 9583,
+        "address": 9542084
+    },
+    "assets/sfx/mobs/spider/spider3.mp3": {
+        "size": 16473,
+        "address": 24304692
+    },
+    "assets/sfx/mobs/spider/spider4.mp3": {
+        "size": 13533,
+        "address": 19610836
+    },
+    "assets/sfx/mobs/spider/spiderdeath.mp3": {
+        "size": 18109,
+        "address": 21586060
+    },
+    "assets/sfx/mobs/wolf/bark1.mp3": {
+        "size": 12679,
+        "address": 21240100
+    },
+    "assets/sfx/mobs/wolf/bark10.mp3": {
+        "size": 11167,
+        "address": 19646772
+    },
+    "assets/sfx/mobs/wolf/bark2.mp3": {
+        "size": 12548,
+        "address": 23056516
+    },
+    "assets/sfx/mobs/wolf/bark3.mp3": {
+        "size": 12113,
+        "address": 20674532
+    },
+    "assets/sfx/mobs/wolf/bark4.mp3": {
+        "size": 10264,
+        "address": 12010492
+    },
+    "assets/sfx/mobs/wolf/bark5.mp3": {
+        "size": 10962,
+        "address": 23177860
+    },
+    "assets/sfx/mobs/wolf/bark6.mp3": {
+        "size": 11391,
+        "address": 24503988
+    },
+    "assets/sfx/mobs/wolf/bark7.mp3": {
+        "size": 11052,
+        "address": 23069076
+    },
+    "assets/sfx/mobs/wolf/bark8.mp3": {
+        "size": 10911,
+        "address": 22990628
+    },
+    "assets/sfx/mobs/wolf/bark9.mp3": {
+        "size": 10003,
+        "address": 20709972
+    },
+    "assets/sfx/mobs/wolf/growl1.mp3": {
+        "size": 19613,
+        "address": 10809612
+    },
+    "assets/sfx/mobs/wolf/growl2.mp3": {
+        "size": 22937,
+        "address": 12815292
+    },
+    "assets/sfx/mobs/wolf/growl3.mp3": {
+        "size": 27913,
+        "address": 22826540
+    },
+    "assets/sfx/mobs/wolf/growl4.mp3": {
+        "size": 33242,
+        "address": 22155468
+    },
+    "assets/sfx/mobs/wolf/whine.mp3": {
+        "size": 14966,
+        "address": 21547076
+    },
+    "assets/sfx/mobs/zombie/zombie1.mp3": {
+        "size": 15745,
+        "address": 9494460
+    },
+    "assets/sfx/mobs/zombie/zombie2.mp3": {
+        "size": 18480,
+        "address": 11612780
+    },
+    "assets/sfx/mobs/zombie/zombie3.mp3": {
+        "size": 11318,
+        "address": 17601908
+    },
+    "assets/sfx/mobs/zombie/zombiedie.mp3": {
+        "size": 14714,
+        "address": 17623532
+    },
+    "assets/sfx/mobs/zombie/zombiehurt1.mp3": {
+        "size": 9602,
+        "address": 14357516
+    },
+    "assets/sfx/mobs/zombie/zombiehurt2.mp3": {
+        "size": 7947,
+        "address": 24552748
+    },
+    "assets/sfx/music/enderdragondeath.mp3": {
+        "size": 630698,
+        "address": 22188716
+    },
+    "assets/sfx/music/menumusic.mp3": {
+        "size": 1045022,
+        "address": 9684180
+    },
+    "assets/sfx/music/song1.mp3": {
+        "size": 1030604,
+        "address": 12856956
+    },
+    "assets/sfx/music/song2.mp3": {
+        "size": 599031,
+        "address": 19713812
+    },
+    "assets/sfx/music/song3.mp3": {
+        "size": 667805,
+        "address": 18667148
+    },
+    "assets/sfx/music/song4.mp3": {
+        "size": 626236,
+        "address": 12086716
+    },
+    "assets/sfx/music/song5.mp3": {
+        "size": 803240,
+        "address": 17657644
+    },
+    "assets/sfx/scavenger/scavenger-chat.mp3": {
+        "size": 7831,
+        "address": 14179836
+    },
+    "assets/sfx/scavenger/scavenger-dirt-ball-hit.mp3": {
+        "size": 26772,
+        "address": 21498572
+    },
+    "assets/sfx/scavenger/scavenger-dirt-ball-miss.mp3": {
+        "size": 13709,
+        "address": 23982276
+    },
+    "assets/sfx/scavenger/scavenger-end.mp3": {
+        "size": 263560,
+        "address": 20394908
+    },
+    "assets/sfx/scavenger/scavenger-find-item-secret.mp3": {
+        "size": 62944,
+        "address": 23188828
+    },
+    "assets/sfx/scavenger/scavenger-find-item.mp3": {
+        "size": 63606,
+        "address": 18517492
+    },
+    "assets/sfx/scavenger/scavenger-other-find-item-secret.mp3": {
+        "size": 24003,
+        "address": 21562052
+    },
+    "assets/sfx/scavenger/scavenger-other-find-item.mp3": {
+        "size": 20333,
+        "address": 14159492
+    },
+    "assets/sfx/scavenger/scavenger-player-left.mp3": {
+        "size": 13230,
+        "address": 21978412
+    },
+    "assets/sfx/scavenger/scavenger-reveal.mp3": {
+        "size": 31588,
+        "address": 10729212
+    },
+    "assets/sfx/scavenger/scavenger-start-countdown.mp3": {
+        "size": 15029,
+        "address": 21005036
+    },
+    "assets/sfx/scavenger/scavenger-start-go.mp3": {
+        "size": 20823,
+        "address": 21377444
+    },
+    "assets/sfx/scavenger/scavenger-start-item-secret.mp3": {
+        "size": 9449,
+        "address": 21192380
+    },
+    "assets/sfx/scavenger/scavenger-start-item.mp3": {
+        "size": 7403,
+        "address": 24488492
+    },
+    "assets/sfx/scavenger/scavenger-win.mp3": {
+        "size": 107324,
+        "address": 24331676
+    },
+    "assets/sfx/ui/hit.mp3": {
+        "size": 5783,
+        "address": 14041460
+    },
+    "assets/sfx/ui/rollover.mp3": {
+        "size": 5457,
+        "address": 21297252
+    },
+    "assets/sfx/ui/tick.mp3": {
+        "size": 5494,
+        "address": 24515388
+    },
+    "assets/sfx/weather/closethunder1.mp3": {
+        "size": 44589,
+        "address": 12042116
+    },
+    "assets/sfx/weather/closethunder2.mp3": {
+        "size": 115666,
+        "address": 21058900
+    },
+    "assets/sfx/weather/closethunder3.mp3": {
+        "size": 145791,
+        "address": 20728404
+    },
+    "assets/sfx/weather/closethunder4.mp3": {
+        "size": 82241,
+        "address": 23353796
+    },
+    "assets/sfx/weather/distantthunder1.mp3": {
+        "size": 55319,
+        "address": 20339580
+    },
+    "assets/sfx/weather/distantthunder10.mp3": {
+        "size": 106241,
+        "address": 23867124
+    },
+    "assets/sfx/weather/distantthunder2.mp3": {
+        "size": 107523,
+        "address": 11413436
+    },
+    "assets/sfx/weather/distantthunder3.mp3": {
+        "size": 122253,
+        "address": 21682028
+    },
+    "assets/sfx/weather/distantthunder4.mp3": {
+        "size": 65263,
+        "address": 14055476
+    },
+    "assets/sfx/weather/distantthunder5.mp3": {
+        "size": 41060,
+        "address": 11654548
+    },
+    "assets/sfx/weather/distantthunder6.mp3": {
+        "size": 69260,
+        "address": 17387988
+    },
+    "assets/sfx/weather/distantthunder7.mp3": {
+        "size": 47967,
+        "address": 21612276
+    },
+    "assets/sfx/weather/distantthunder8.mp3": {
+        "size": 93132,
+        "address": 24773708
+    },
+    "assets/sfx/weather/distantthunder9.mp3": {
+        "size": 109206,
+        "address": 24195476
+    },
+    "assets/sfx/zanzlanz-splash.mp3": {
+        "size": 169226,
+        "address": 11778156
+    },
+    "favicon.png": {
+        "size": 3548,
+        "address": 25317952
+    }
+}

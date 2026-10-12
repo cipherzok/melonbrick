@@ -1,0 +1,67 @@
+import { types as t, generator, parser } from "./dependencies.js";
+import AstUtil from "./ast-util.js";
+import Base from "./base.js";
+import { isNative } from "./map-util.js";
+
+export default class Injector extends Base {
+    constructor(mineblocksCode, melonbrickCode) {
+        super(mineblocksCode);
+        this.melonbrickAST = parser.parse(melonbrickCode);
+        this.main = [];
+        this.main.push(t.assignmentExpression(
+            "=",
+            AstUtil.unsafeIdentifier('window.lime.$scripts["Mine Blocks"]'),
+            this.varD.declarations[0].init
+        ));
+        this.bundle = [];
+        this.mainCall = this.iife.body.pop();
+        this.root = {};
+        this.$lime_init.body.shift();
+        this.$lime_init.body[0].expression.alternate.expressions.splice(2, 1);
+    }
+    end() {
+        this.iife.body.push(...this.bundle);
+        this.iife.body.push(this.mainCall);
+        this.generateExports();
+        this.main.push(...this.melonbrickAST.program.body)
+        this.initCode = generator(this.mineblocksAST).code;
+        this.mainCode = generator(AstUtil.getAST(this.main)).code;
+    }
+    loop(name) {
+        this.initBranch(name);
+        this.injectReference(name);
+        this.bundle.push(...this.referenceNodes[name]);
+    }
+    initBranch(name) {
+        const parts = name.split(".");
+        const reference = parts.pop();
+        if (parts.length === 0) {
+            if (!isNative(name)) this.root[reference] = "rootReference";
+            return;
+        }
+        let target = this.root;
+        for (const part of parts) {
+            if (!target[part]) target[part] = {}
+            target = target[part];
+        }
+    }
+    generateExports() {
+        function recursive(branch) {
+            const objectExpression = t.objectExpression([]);
+            for (const folder of Object.keys(branch)) {
+                const objectProperty = t.objectProperty(AstUtil.unsafeIdentifier(folder), recursive(branch[folder]))
+                objectExpression.properties.push(objectProperty);
+            }
+            return objectExpression;
+        }
+
+        for (const namespace in this.root) {
+            const identifier = t.identifier(namespace);
+            let init;
+            if (this.root[namespace] !== "rootReference") init = recursive(this.root[namespace]);
+            const declarator = t.variableDeclarator(identifier, init);
+            const variableDeclaration = t.variableDeclaration("var", [declarator]);
+            this.main.push(t.exportNamedDeclaration(variableDeclaration));
+        }
+    }
+}

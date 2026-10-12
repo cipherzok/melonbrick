@@ -1,0 +1,159 @@
+#!/usr/bin/env node
+
+import fs from "fs";
+import path from "path";
+import { createPatch, applyPatch } from "diff";
+import { parser, generator } from "./src/dependencies.js";
+
+import Decompiler from "./src/decompiler.js";
+import Injector from "./src/injector.js";
+import AstUtil from "./src/ast-util.js";
+import Bundler from "./src/bundler.js";
+
+import order from "./src/order.json" with { type: "json" };
+
+const mineblocksCode = fs.readFileSync("Mine Blocks.js", { encoding: "utf8" });
+const melonbrickCode = fs.readFileSync(path.join("src", "melonbrick.js"), { encoding: "utf8" });
+
+const deobfuscateData = {};
+const renameMap = {};
+
+function setData(obfuscate, deobfuscate, type) {
+    deobfuscateData[deobfuscate] = { type, obfuscate };
+    renameMap[obfuscate] = deobfuscate;
+}
+
+function writeJSON(name, json) {
+    fs.writeFileSync(path.join("src", name + ".json"), JSON.stringify(json, null, 4));
+}
+
+const command = process.argv[2] || "diffbundle";
+
+const commands = {
+    decompile: () => {
+        const decompiler = new Decompiler(mineblocksCode);
+
+        decompiler.done = function (name, output) {
+            const parts = name.split(".");
+
+            const fileName = parts.pop() + ".js";
+            const dir = path.join("decompiled", ...parts);
+
+            fs.mkdirSync(dir, { recursive: true });
+
+            fs.writeFileSync(path.join(dir, fileName), output);
+        }
+
+        decompiler.process();
+        decompiler.iterateOrder()
+    },
+    diffdecompiled: () => {
+        const decompiler = new Decompiler(mineblocksCode);
+
+        decompiler.done = function (name, original) {
+            const parts = name.split(".");
+
+            const fileName = parts.pop();
+
+            const edited = fs.readFileSync(path.join("decompiled", ...parts, fileName + ".js"), { encoding: "utf8" });
+
+            if (edited !== original) {
+                const dir = path.join("patches", ...parts);
+
+                fs.mkdirSync(dir, { recursive: true });
+
+                const patch = createPatch(fileName + ".js", original, edited);
+
+                fs.writeFileSync(path.join(dir, fileName + ".patch"), patch);
+            }
+        }
+        decompiler.process();
+        decompiler.iterateOrder()
+    },
+    generatemaps: () => {
+        const program = parser.parse(mineblocksCode).program;
+
+        const iife = AstUtil.iife(program);
+
+        for (const statement of iife.body) {
+            if (statement.type === "VariableDeclaration") {
+                for (const declarator of statement.declarations) {
+                    if (!declarator.init || declarator.init.type !== "AssignmentExpression") continue;
+                    const left = declarator.init.left;
+                    const varName = declarator.id.name;
+                    const enumName = left.property.value || left.property.name;
+                    setData(varName, enumName, "enum");
+                }
+            }
+            if (statement.type === "ExpressionStatement") {
+                const left = statement.expression.left;
+                const right = statement.expression.right;
+                if (left && left.object && left.object.name === "m") {
+                    const varName = right.name;
+                    const className = left.property.name || left.property.value;
+                    setData(varName, className, "class");
+                }
+            }
+        }
+
+        writeJSON("deobfuscate-data", deobfuscateData);
+        writeJSON("rename-map", renameMap);
+    },
+    patchdecompiled: () => {
+        for (const name of order) {
+            const parts = name.split(".");
+            const fileName = parts.pop();
+
+            const patchPath = path.join("patches", ...parts, fileName + ".patch");
+
+            if (fs.existsSync(patchPath)) {
+                const sourcePath = path.join("decompiled", ...parts, fileName + ".js");
+                const patch = fs.readFileSync(patchPath, { encoding: "utf8" });
+                const source = fs.readFileSync(sourcePath, { encoding: "utf8" });
+                const result = applyPatch(source, patch);
+                if (result === false) {
+                    console.log("Patch could not be applied: " + patchPath)
+                } else {
+                    fs.writeFileSync(sourcePath, result);
+                }
+            }
+        }
+    },
+    diffbundle: () => {
+        const bundler = new Bundler();
+        bundler.iterateOrder();
+        bundler.process();
+
+        const injector = new Injector(mineblocksCode, melonbrickCode);
+        injector.process();
+        injector.iterateOrder();
+
+        const edited = generator(AstUtil.getAST(bundler.bundle)).code;
+        const original = generator(AstUtil.getAST(injector.bundle)).code;
+
+        const patch = createPatch("bundle.js", original, edited);
+
+        fs.writeFileSync(path.join("bundle.patch"), patch);
+    },
+    test: () => {
+        const bundler = new Bundler();
+        bundler.iterateOrder();
+        bundler.process();
+
+        const injector = new Injector(mineblocksCode, melonbrickCode);
+        injector.process();
+        injector.iterateOrder();
+
+        injector.bundle = bundler.bundle;
+
+        injector.end();
+        fs.writeFileSync(path.join("mine-blocks", "Mine Blocks.js"), injector.mainCode);
+        fs.writeFileSync(path.join("mine-blocks", "init.js"), injector.initCode);
+    }
+}
+
+if (commands[command]) {
+    commands[command]();
+} else {
+    console.log("Unknown command: " + command);
+}

@@ -1,0 +1,107 @@
+body {
+    background-color: #0D1117;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    color: #E6EDF3;
+}
+
+#log {
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+    color: #8B949E;
+}
+
+#download {
+    background-color: #21262D;
+    color: #E6EDF3;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+#download:hover {
+    background-color: #30363D;
+}
+
+select {
+    box-sizing: border-box;
+    background-color: #21262D;
+    color: #E6EDF3;
+    border: none;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+}
+
+.row {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+label {
+    min-width: 80px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.main {
+    box-shadow: -20px 20px 5px #0b0e137e;
+    border-radius: 10px;
+    background-color: #161B22;
+    height: 350px;
+    width: 500px;
+    padding: 40px;
+}
+
+.center-box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    margin-left: 4px;
+}
+
+.import-file {
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #21262D;
+    color: #E6EDF3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#exe-file-name, #js-file-name {
+    flex: 1;
+    color: #8B949E;
+    text-align: center;
+}
+
+.import-file:hover {
+    background-color: #30363D;
+}

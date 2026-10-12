@@ -1,3 +1,7 @@
-node_modules
-Mine Blocks 1.31.2
-dist
+node_modules/
+mine-blocks/
+Mine Blocks.js
+Mine Blocks.exe
+dist/
+decompiled/
+bundle.patch
