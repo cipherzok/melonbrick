@@ -1311,5 +1311,9 @@
     "assets/sfx/zanzlanz-splash.mp3": {
         "size": 169226,
         "address": 11778156
+    },
+    "favicon.png": {
+        "size": 3548,
+        "address": 25317952
     }
 }

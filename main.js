@@ -11,7 +11,8 @@ const [melonbrickCode, patch, index] = await Promise.all([
 ])
 
 const zip = new JSZip();
-zip.file("index.html", index)
+zip.file("index.html", index);
+zip.file("mods.json", "[]");
 
 const $log = document.getElementById("log");
 function log(text) {
@@ -96,6 +97,7 @@ function extractAssets(exeBytes) {
         const asset = exeBytes.subarray(data.address, data.address + data.size);
         if (data.position) {
             const compressed = pako.gzip(asset, { level: 9 });
+            compressed[9] = 0x0A;
             pak.set(compressed, data.position);
         } else {
             zip.file(path, asset);
