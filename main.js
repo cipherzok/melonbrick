@@ -88,12 +88,18 @@ function injectAPI(mineblocksCode, melonbrickCode, patch) {
 }
 
 function extractAssets(exeBytes) {
+    const pak = new Uint8Array(3610681);
+    const header = new TextEncoder().encode("lime-asset-pack");
+    pak.set(header)
     for (const path in manifest) {
         const data = manifest[path];
         const asset = exeBytes.subarray(data.address, data.address + data.size);
         if (data.position) {
+            const compressed = pako.gzip(asset, { level: 9 });
+            pak.set(compressed, data.position);
         } else {
             zip.file(path, asset);
         }
     }
+    zip.file("lib/default.pak", pak);
 }
