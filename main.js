@@ -13,10 +13,12 @@ const [melonbrickCode, patch, index] = await Promise.all([
 const zip = new JSZip();
 zip.file("index.html", index);
 zip.file("mods.json", "[]");
+zip.folder("mods/");
 
 const $log = document.getElementById("log");
-function log(text) {
+async function log(text) {
     $log.textContent = text;
+    await new Promise(requestAnimationFrame);
 }
 
 const $importEXE = document.getElementById("import-exe");
@@ -54,15 +56,17 @@ function requestFile(extensions, onSuccess) {
 
 const $download = document.getElementById("download");
 $download.onclick = async function () {
+    if (!exeFile) return log("Please select the 32-bit exe file");
+    if (!jsFile) return log("Please select the JavaScript file");
     const [buffer, mineblocksCode] = await Promise.all([
         exeFile.arrayBuffer(),
         jsFile.text()
     ]);
 
-    injectAPI(mineblocksCode, melonbrickCode, patch);
+    await injectAPI(mineblocksCode, melonbrickCode, patch);
 
     const exeBytes = new Uint8Array(buffer)
-    extractAssets(exeBytes);
+    await extractAssets(exeBytes);
 
     const blob = await zip.generateAsync({ type: "blob" });
     const url = URL.createObjectURL(blob);
@@ -73,11 +77,14 @@ $download.onclick = async function () {
     URL.revokeObjectURL(url);
 }
 
-function injectAPI(mineblocksCode, melonbrickCode, patch) {
+async function injectAPI(mineblocksCode, melonbrickCode, patch) {
+    await log("Injecting API");
+
     const injector = new Injector(mineblocksCode, melonbrickCode);
     injector.process();
     injector.iterateOrder();
 
+    await log("Patching Mine Blocks code");
     const original = generator(AstUtil.getAST(injector.bundle)).code;
     const result = Diff.applyPatch(original, patch);
 
@@ -88,7 +95,8 @@ function injectAPI(mineblocksCode, melonbrickCode, patch) {
     zip.file("init.js", injector.initCode);
 }
 
-function extractAssets(exeBytes) {
+async function extractAssets(exeBytes) {
+    await log("Extracting assets");
     const pak = new Uint8Array(3610681);
     const header = new TextEncoder().encode("lime-asset-pack");
     pak.set(header)
@@ -96,10 +104,12 @@ function extractAssets(exeBytes) {
         const data = manifest[path];
         const asset = exeBytes.subarray(data.address, data.address + data.size);
         if (data.position) {
+            await log("Packing asset: " + path);
             const compressed = pako.gzip(asset, { level: 9 });
             compressed[9] = 0x0A;
             pak.set(compressed, data.position);
         } else {
+            await log("Saving asset: " + path);
             zip.file(path, asset);
         }
     }
