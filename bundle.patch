@@ -1,0 +1,98 @@
+Index: bundle.js
+===================================================================
+--- bundle.js
++++ bundle.js
+@@ -9355,8 +9355,12 @@
+   this.musicCountdown = n.Instance.get_fps() * (120 * Math.random() + 240) | 0;
+   this.resize();
+   c && (this.firstTime = !0, this.initializeWorldGen(d, f, l, p, Q));
+   null != window.gameplayStart && window.gameplayStart();
++  melonbrick.emit({
++    type: "newGameInstance",
++    game: this
++  });
+ };
+ Game = h
+ m.Game = h;
+ h.__name__ = "Game";
+@@ -10096,8 +10100,17 @@
+           parseFloat(J.string(this.world.armors[p][1])) >= parseFloat(J.string(q.get(this.world.armors[p][0], "life"))) && 1 == q.get(this.world.armors[p][0], "tool") && (this.world.armors[p] = ["air", 0, new g()], this.updateArmorRenderers());
+         }
+         a *= Math.max(0, d);
+       }
++      const event = {
++        type: "hurtPlayer",
++        cancel: false,
++        game: this,
++        cause: c,
++        damage: a
++      };
++      melonbrick.emit(event);
++      if (event.cancel) return;
+       0 != a && (this.world.health -= Math.ceil(a), 0 < a && (2 == b ? this.requestSound("ouch2", 0, 0, 1, .3) : this.requestSound("ouch1", 0, 0, 1, .3), this.hurtAnimation = !0, this.screenTilter++));
+     }
+   },
+   getRotAngle: function () {
+@@ -10906,8 +10919,12 @@
+     G.gt(n.Instance.keyDown(I.intToKey.h[I.keyBindings.h.secondClick.h.id]), 0) && 1 == I.useRightClickKey ? this.shifting = !0 : this.shifting = !1;
+     this.mouseWheelThing = !0;
+   },
+   inGame1: function () {
++    melonbrick.emit({
++      type: "gameTick",
++      game: this
++    });
+     this.onCertainInterval();
+     this.manageEffects(this.world.player.id);
+     0 > this.world.food && (this.world.food = 0);
+     if (20 < this.world.health || 1 == this.world.gamemode) this.world.health = 20;
+@@ -11108,8 +11125,15 @@
+               d.h.babyTimer *= .8;
+               return;
+             }
+           }
++          const event = {
++            type: "place",
++            game: this,
++            cancel: false
++          };
++          melonbrick.emit(event);
++          if (event.cancel) return;
+           if (null == q.get(this.world.get_selectedInventoryItemType(), "usable")) {
+             if (null != c) if ("wolf" == this.world.mobs.h[c].h.type) {
+               if (1 == this.world.mobs.h[c].h.tamed) {
+                 this.world.mobs.h[c].h.sitting = !this.world.mobs.h[c].h.sitting;
+@@ -12404,8 +12428,17 @@
+     if (!(0 > c.length)) {
+       b = c.toLowerCase();
+       for (var d = b.split(" "), f = 0; f < d.length;) "" == d[f] && (d.splice(f, 1), --f), ++f;
+       f = this.getGameRule("sendcommandfeedback");
++      const event = {
++        type: "command",
++        parts: d,
++        feedback: f,
++        game: this,
++        cancel: false
++      };
++      melonbrick.emit(event);
++      if (event.cancel) return;
+       if (W.tripleEqual(this.world.cheats, -1) && !a) switch (d[0]) {
+         case "cheats":
+           if ("enable" == d[1]) {
+             this.world.cheats = !0;
+@@ -22067,8 +22100,15 @@
+       }
+       "seed" == l ? 7 == this.world.wheat.h[f] && (this.unlockAchieve(23), 1 != this.world.gamemode && (this.addDrop("wheat", b + .5, -(a + .5), 1, null, null), 2 <= (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) && this.addDrop("seed", b + .5, -(a + .5), 1, null, null), 2 <= (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) && this.addDrop("seed", b + .5, -(a + .5), 1, null, null))) : "mel" == l ? p ? m = !0 : (1 != this.world.gamemode && this.addDrop("mels", b + .5, -(a + .5), Math.min(9, (5 * Math.random() | 0) + 3 + (Math.random() * (B + 1) | 0)) | 0, null, null), n = !0) : "carrot" == l ? (6 == this.world.wheat.h[f] && 2 <= (3 * Math.random() + (Math.random() * B + 1 | 0) | 0) || 7 == this.world.wheat.h[f]) && 1 != this.world.gamemode && this.addDrop("carrot", b + .5, -(a + .5), 1, null, null) : "potato" == l ? (6 == this.world.wheat.h[f] && 2 <= (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) || 7 == this.world.wheat.h[f]) && 1 != this.world.gamemode && (.2 > Math.random() && this.addDrop("ppotato", b + .5, -(a + .5), 1, null, null), this.addDrop("potato", b + .5, -(a + .5), (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) + 1, null, null)) : "nw" == l ? (6 == this.world.wheat.h[f] && 2 <= (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) || 7 == this.world.wheat.h[f]) && 1 != this.world.gamemode && this.addDrop("nw", b + .5, -(a + .5), (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) + 1, null, null) : "bseed" == l && (6 == this.world.wheat.h[f] && 2 <= (3 * Math.random() + (Math.random() * (B + 1) | 0) | 0) || 7 == this.world.wheat.h[f]) && 1 != this.world.gamemode && this.addDrop("beet", b + .5, -(a + .5), (4 * Math.random() | 0) + 1, null, null);
+       0 == n && (null != q.get(l, "dropDifferent") && 1 != m ? 1 != this.world.gamemode && "na" != q.get(l, "dropDifferent") && ("bed1" == l || "bed2" == l ? (h = q.get(l, "dropDifferent"), T = new g(), T.h.type = this.world.states.h[f], this.addDrop(h, b + .5, -(a + .5), 1, null, T)) : this.addDrop(q.get(l, "dropDifferent"), b + .5, -(a + .5), 1, null, null)) : "gs" == l || "bdgs" == l ? 1 != this.world.gamemode && (this.world.states.h[f] ? (T = new g(), T.h.type = this.world.states.h[f], this.addDrop(l, b + .5, -(a + .5), 1, null, T)) : this.addDrop(l, b + .5, -(a + .5), 1, null, null)) : "lv" == l ? 1 == ka ? 1 != this.world.gamemode && this.addDrop(l, b + .5, -(a + .5), 1, null, null) : 1 == (Math.random() * (10 - 2 * (Math.random() * (B + 1) | 0)) | 0) ? 1 != this.world.gamemode && this.addDrop("sl", b + .5, -(a + .5), 1, null, null) : 1 != this.world.gamemode && this.addDrop("na", b + .5, -(a + .5), 1, null, null) : "lgr" == l ? p || m ? 1 != this.world.gamemode && this.addDrop(l, b + .5, -(a + .5), 1, null, null) : 1 != this.world.gamemode && (4 <= (Math.random() * (5 + (Math.random() * (B + 1) | 0)) | 0) && this.addDrop("seed", b + .5, -(a + .5), 1, null, null), 29 <= (Math.random() * (30 + 2 * (Math.random() * (B + 1) | 0)) | 0) && this.addDrop("bseed", b + .5, -(a + .5), 1, null, null), 69 <= (Math.random() * (70 + 3 * (Math.random() * (B + 1) | 0)) | 0) && this.addDrop("pseed", b + .5, -(a + .5), 1, null, null), 89 <= (Math.random() * (90 + 3 * (Math.random() * (B + 1) | 0)) | 0) && this.addDrop("wseed", b + .5, -(a + .5), 1, null, null)) : "gv" == l ? 1 != this.world.gamemode && (p || m || 1 != (Math.random() * (10 - 2 * (Math.random() * (B + 1) | 0)) | 0) ? this.addDrop("gv", b + .5, -(a + .5), 1, null, null) : this.addDrop("flint", b + .5, -(a + .5), 1, null, null)) : "carpet" == l || "cloth" == l || "bdcloth" == l || "mh" == l ? 1 != this.world.gamemode && (T = new g(), T.h.type = this.world.states.h[f], this.addDrop(l, b + .5, -(a + .5), 1, null, T)) : "chest" == l || "oven" == l || "brew" == l || "enchant" == l ? 1 != this.world.gamemode && ("" == this.world.states.h[f] ? h = null : (T = new g(), T.h.nameChange = this.world.states.h[f], h = T), this.addDrop(l, b + .5, -(a + .5), 1, null, h)) : "dropper" == l || "dispense" == l ? 1 != this.world.gamemode && ("" == this.world.states.h[f + "_3"] ? h = null : (T = new g(), T.h.nameChange = this.world.states.h[f + "_3"], h = T), this.addDrop(l, b + .5, -(a + .5), 1, null, h)) : "anvil" == l ? 1 != this.world.gamemode && (T = new g(), T.h.damage = this.world.states.h[f], this.addDrop(l, b + .5, -(a + .5), 1, null, T)) : 1 != this.world.gamemode && this.addDrop(l, b + .5, -(a + .5), 1, null, null));
+       1 == this.requestRemove(b, a, !0, d) && this.world.setFG(b, a, "air");
++      melonbrick.emit({
++        type: "blockMined",
++        id: l,
++        x: b,
++        y: a,
++        game: this
++      });
+       if ("ice" == l || "fice" == l || "sw" == l) this.world.setFG(b, a, "wr"), this.makeBlock(b, a);
+     }
+   },
+   itemFromBlock: function (b, a) {
