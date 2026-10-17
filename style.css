@@ -17,6 +17,7 @@ body {
 }
 
 #download {
+    margin-top: 10px;
     background-color: #21262D;
     color: #E6EDF3;
     border-radius: 5px;
@@ -45,7 +46,7 @@ select {
 }
 
 .row {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     height: 40px;
@@ -61,7 +62,7 @@ label {
     box-shadow: -20px 20px 5px #0b0e137e;
     border-radius: 10px;
     background-color: #161B22;
-    height: 350px;
+    height: 300px;
     width: 500px;
     padding: 40px;
 }
@@ -74,7 +75,7 @@ label {
 
 h1 {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
