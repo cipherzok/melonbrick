@@ -104,10 +104,16 @@ melonbrick.getHookAfter = function (func, hook) {
 }
 
 async function loadMods() {
-    const res = await fetch("mods.json");
-    const text = await res.text();
-    const modFolders = JSON.parse(text);
-    for (const id of modFolders) {
+    const text = await fetch("mods.json").then(r => r.text());
+    const folders = JSON.parse(text);
+    for (const name of folders) {
+        const path = `./mods/${name}/`;
+        const text = await fetch(path + "mod.json").then(r => r.text());
+        const mod = JSON.parse(text);
+        mods[mod.id] = mod;
+        idToPath[mod.id] = path;
+    }
+    for (const id in mods) {
         await loadMod(id);
     }
     window.lime.embed("Mine Blocks", "content", 0, 0);
@@ -115,22 +121,25 @@ async function loadMods() {
 
 async function loadMod(id) {
     if (!loaded[id]) {
-        const path = "./mods/" + id + "/";
-        const res = await fetch(path + "mod.json");
-        const text = await res.text();
-        const mod = JSON.parse(text);
+        const mod = mods[id];
+        if (!mod) return null;
         if (!areCompatible(mod.melonbrick, melonbrick.version)) {
-            console.log(`Required melonbrick v${mod.melonbrick} by ${id} is incompatible with v${melonbrick.version}`);
+            console.log(`Required melonbrick v${mod.melonbrick} by "${id}" is incompatible with v${melonbrick.version}`);
             return;
         }
         for (const dependency in mod.dependencies) {
             const current = await loadMod(dependency);
+            if (!current) {
+                console.log(`Required "${dependency}" dependency by "${id}" is missing`);
+                return;
+            }
             const required = mod.dependencies[dependency];
             if (!areCompatible(current, required)) {
-                console.log(`Required ${dependency} v${required} by ${id} is incompatible with v${current}`);
+                console.log(`Required "${dependency}" v${required} by "${id}" is incompatible with v${current}`);
                 return;
             }
         }
+        const path = idToPath[id];
         const module = await import(path + mod.entry);
         melonbrick.exports[id] = module.default;
         loaded[id] = mod.version;
@@ -139,6 +148,8 @@ async function loadMod(id) {
 }
 
 const loaded = {};
+const idToPath = {};
+const mods = {};
 
 function areCompatible(current, required) {
     current = current.split(".").map(Number);
