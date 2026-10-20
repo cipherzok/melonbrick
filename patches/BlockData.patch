@@ -1,0 +1,14 @@
+Index: BlockData.js
+===================================================================
+--- BlockData.js
++++ BlockData.js
+@@ -6035,8 +6035,9 @@
+   a.h.timerToUse = 50;
+   a.h.usable = !0;
+   b.h.dtb = a;
+   BlockData.blockData = b;
++  melonbrick.emit({ type: "blockDataGenerated", blockData: b });
+   BlockData.generateIdentifierMap();
+ };
+ BlockData.identifierToID = new haxe.ds.StringMap();
+ BlockData.blockIDList = [];

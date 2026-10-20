@@ -103,6 +103,20 @@ melonbrick.getHookAfter = function (func, hook) {
     return patched;
 }
 
+melonbrick.extendClass = function (prototype, overrides) {
+    const object = Object.create(prototype);
+
+    for (const key in overrides) {
+        object[key] = overrides[key];
+    }
+
+    if (overrides.toString !== Object.prototype.toString) {
+        object.toString = overrides.toString;
+    }
+
+    return object;
+}
+
 async function loadMods() {
     const text = await fetch("mods.json").then(r => r.text());
     const folders = JSON.parse(text);
@@ -111,7 +125,7 @@ async function loadMods() {
         const text = await fetch(path + "mod.json").then(r => r.text());
         const mod = JSON.parse(text);
         mods[mod.id] = mod;
-        idToPath[mod.id] = path;
+        melonbrick.idToPath[mod.id] = path;
     }
     for (const id in mods) {
         await loadMod(id);
@@ -139,7 +153,7 @@ async function loadMod(id) {
                 return;
             }
         }
-        const path = idToPath[id];
+        const path = melonbrick.idToPath[id];
         const module = await import(path + mod.entry);
         melonbrick.exports[id] = module.default;
         loaded[id] = mod.version;
@@ -148,7 +162,7 @@ async function loadMod(id) {
 }
 
 const loaded = {};
-const idToPath = {};
+melonbrick.idToPath = {};
 const mods = {};
 
 function areCompatible(current, required) {
