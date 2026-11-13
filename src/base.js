@@ -61,8 +61,4 @@ export default class Base extends AstUtil {
     getDefinitionNode(path) {
         return t.variableDeclaration("var", [path.node]);
     }
-    getReferenceString(name) {
-        const ast = AstUtil.getAST(this.referenceNodes[name]);
-        return generator(ast).code;
-    }
 }

@@ -2,6 +2,7 @@ import { types as t } from "./dependencies.js";
 import Base from "./base.js";
 import AstUtil from "./ast-util.js";
 import renameMap from "./rename-map.json" with { type: "json" };
+import generator from "extended-babel-generator";
 
 export default class Decompiler extends Base {
     constructor(mineblocksCode) {
@@ -20,6 +21,10 @@ export default class Decompiler extends Base {
             AstUtil.unsafeIdentifier(path.node.id.name),
             path.node.init
         );
+    }
+    getReferenceString(name) {
+        const ast = AstUtil.getAST(this.referenceNodes[name]);
+        return generator(ast).code;
     }
     async loop(name) {
         const output = this.getReferenceString(name);
