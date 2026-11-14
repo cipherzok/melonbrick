@@ -2,18 +2,18 @@ Index: Block_Dispenser.js
 ===================================================================
 --- Block_Dispenser.js
 +++ Block_Dispenser.js
-@@ -34,9 +34,13 @@
-         a = this.world.states.h[this.blockID + "_2"][b];
-         if (null == a || null == a[0]) a = this.world.states.h[this.blockID + "_2"][b] = Game.emptyItem();
-         var c = a[0],
-           d = !1;
--        if ("arrow" == c) {
-+        const event = { type: "dispense", block: this, itemArray: a, cancel: false, index: b, drop: d }
-+        melonbrick.emit(event);
-+        if (event.cancel) {
-+          d = event.drop;
-+        } else if ("arrow" == c) {
-           var f = this.world.arrows,
-             l = Game.uniqueID(this.world.arrows, "arrow"),
-             p = new haxe.ds.StringMap();
-           p.h.x = this.x + .5 + this.dropX / 30;
+@@ -100,9 +100,13 @@
+                 a = this.world.states.h[this.blockID + "_2"][b];
+                 if (null == a || null == a[0]) a = this.world.states.h[this.blockID + "_2"][b] = Game.emptyItem();
+                 var c = a[0],
+                     d = !1;
+-                if ("arrow" == c) {
++                const event = { type: "dispense", block: this, itemArray: a, cancel: false, index: b, drop: d }
++                melonbrick.emit(event);
++                if (event.cancel) {
++                    d = event.drop;
++                } else if ("arrow" == c) {
+                     var f = this.world.arrows,
+                         l = Game.uniqueID(this.world.arrows, "arrow"),
+                         p = new haxe.ds.StringMap();
+                     p.h.x = this.x + .5 + this.dropX / 30;
