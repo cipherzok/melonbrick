@@ -1,0 +1,14 @@
+Index: Main.js
+===================================================================
+--- Main.js
++++ Main.js
+@@ -728,8 +728,9 @@
+     onTouchCancel: function (b) {
+         GlobalSave.touchControls && lemongine.Lemongine.prototype.onTouchCancel.call(this, b);
+     },
+     loadAssets: function () {
++        melonbrick.emit({ type: "loadAssets" });
+         lemongine.AssetManager.loadImage("assets/images/world/blocks.png", "blocks");
+         lemongine.AssetManager.loadImage("assets/images/backgrounds/background_trees.png", "background_trees");
+         lemongine.AssetManager.loadImage("assets/images/backgrounds/nether_bg.png", "nether_bg");
+         lemongine.AssetManager.loadImage("assets/images/backgrounds/ender_bg.png", "ender_bg");

@@ -18,6 +18,7 @@ melonbrick.emit = function (event) {
     if (eventListeners[event.type]) {
         for (const callback of eventListeners[event.type]) callback(event);
     }
+    return event;
 }
 
 melonbrick.waitReference = function (name, callback) {

@@ -7,24 +7,23 @@ Index: Game.js
          this.initializeWorldGen(d, f, l, p, Q)
      );
      null != window.gameplayStart && window.gameplayStart();
-+    melonbrick.emit({ type: "newGameInstance", game: this });
++    melonbrick.emit({ type: "postGameInstance", game: this });
  };
  m.Game = Game;
  Game.__name__ = "Game";
  Game.wordWrap = function (b, a, c, d) {
-@@ -1953,8 +1954,11 @@
+@@ -1953,8 +1954,10 @@
                      );
                  }
                  a *= Math.max(0, d);
              }
-+            const event = { type: "hurtPlayer", cancel: false, game: this, cause: c, damage: a };
-+            melonbrick.emit(event);
-+            if (event.cancel) return;
++            const event = melonbrick.emit({ type: "hurtPlayer", game: this, cause: c, damage: a, damageResult: a });
++            a = event.damageResult;
              0 != a && (
                  this.world.health -= Math.ceil(a),
                  0 < a && (
                      2 == b
-@@ -3494,8 +3498,9 @@
+@@ -3494,8 +3497,9 @@
              : this.shifting = !1;
          this.mouseWheelThing = !0;
      },
@@ -34,31 +33,29 @@ Index: Game.js
          this.manageEffects(this.world.player.id);
          0 > this.world.food && (this.world.food = 0);
          if (20 < this.world.health || 1 == this.world.gamemode) this.world.health = 20;
-@@ -3837,8 +3842,11 @@
-                             d.h.babyTimer *= .8;
-                             return;
-                         }
-                     }
-+                    const event = { type: "place", game: this, cancel: false };
-+                    melonbrick.emit(event);
+@@ -3816,8 +3820,10 @@
+                     this.placeDelay = 0
+                 );
+                 if (!c || this.isShiftClickAndContinue) {
+                     c = this.getClosestMob();
++                    const event = melonbrick.emit({ type: "playerShiftClick", game: this, cancel: false, closestMob: c });
 +                    if (event.cancel) return;
-                     if (null == BlockData.get(this.world.get_selectedInventoryItemType(), "usable")) {
-                         if (null != c) if ("wolf" == this.world.mobs.h[c].h.type) {
-                             if (1 == this.world.mobs.h[c].h.tamed) {
-                                 this.world.mobs.h[c].h.sitting = !this.world.mobs.h[c].h.sitting;
-@@ -6581,8 +6589,11 @@
+                     if (null != c) {
+                         var d = this.getBreedableMob(this.mouseWorldPosition.x | 0, this.mouseWorldPosition.y | 0, this.world.get_selectedInventoryItemType());
+                         if (null != d) {
+                             1 != this.world.gamemode && this.world.reduceInventoryItemCount(this.world.selectedInventoryItem, 1);
+@@ -6581,8 +6587,10 @@
                  d.splice(f, 1),
                  --f
              ), ++f;
              f = this.getGameRule("sendcommandfeedback");
-+            const event = { type: "command", parts: d, feedback: f, game: this, cancel: false }
-+            melonbrick.emit(event);
++            const event = melonbrick.emit({ type: "interpretCommand", parts: d, feedback: f, game: this, cancel: false });
 +            if (event.cancel) return;
              if (lemongine.Helpers.tripleEqual(this.world.cheats, -1) && !a) switch (d[0]) {
                  case "cheats":
                      if ("enable" == d[1]) {
                          this.world.cheats = !0;
-@@ -18441,8 +18452,9 @@
+@@ -18441,8 +18449,9 @@
                                                      this.addDrop(l, b + .5, -(a + .5), 1, null, T)
                                                  )
                                                  : 1 != this.world.gamemode && this.addDrop(l, b + .5, -(a + .5), 1, null, null));

@@ -1,0 +1,14 @@
+Index: Inventory.js
+===================================================================
+--- Inventory.js
++++ Inventory.js
+@@ -3152,8 +3152,9 @@
+         null != this.gotoAtStartOfFrame && (
+             this.gotoAndStop(this.gotoAtStartOfFrame),
+             this.gotoAtStartOfFrame = null
+         );
++        melonbrick.emit({ type: "updateInventory", inventory: this });
+         switch (this.currentFrame) {
+             case 1:
+                 var a = this.inventorySlots.h,
+                     c = a;

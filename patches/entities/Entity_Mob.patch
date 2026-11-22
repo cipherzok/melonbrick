@@ -1,0 +1,26 @@
+Index: Entity_Mob.js
+===================================================================
+--- Entity_Mob.js
++++ Entity_Mob.js
+@@ -119,8 +119,10 @@
+ };
+ entities.Entity_Mob.spawnMob = function (b, a, c, d) {
+     var f = Main.Instance.game.world,
+         l = f.mobs;
++    const event = melonbrick.emit({ type: "spawnMob", id: b, x: a, y: c, name: d, world: f });
++    if (event.mobID) return event.mobID;
+     switch (b) {
+         case "bat":
+             f.batNum++;
+             var k = entities.Entity_Mob.nextMobID();
+@@ -572,8 +574,10 @@
+     for (var b = Main.Instance.game.world, a = Object.keys(b.mobData.h), c = a.length, d = 0; d < c;) b.setMobNum(a[d++], 0, !0);
+ };
+ entities.Entity_Mob.matchMobID = function (b) {
+     b = b.toLowerCase().replace(/[ ]+/, "");
++    const event = melonbrick.emit({ type: "normalizeMobId", id: b });
++    if (event.result) return event.result;
+     switch (b) {
+         case "bat":
+         case "blaze":
+         case "chicken":
