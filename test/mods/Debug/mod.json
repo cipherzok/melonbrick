@@ -1,0 +1,7 @@
+{
+    "id": "debugutil",
+    "version": "1.0.0",
+    "melonbrick": "2.0.0",
+    "entry": "main.js",
+    "dependencies": {}
+}

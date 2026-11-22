@@ -1,5 +1,8 @@
 node_modules/
-mine-blocks/
+test/*
+!test/mods/
+test/mods/WIP
+test/mods/Helper
 Mine Blocks.js
 Mine Blocks.exe
 decompiled/

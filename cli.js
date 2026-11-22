@@ -147,8 +147,8 @@ const commands = {
         injector.bundle = bundler.bundle;
 
         injector.end();
-        fs.writeFileSync(path.join("mine-blocks", "Mine Blocks.js"), injector.mainCode);
-        fs.writeFileSync(path.join("mine-blocks", "init.js"), injector.initCode);
+        fs.writeFileSync(path.join("test", "Mine Blocks.js"), injector.mainCode);
+        fs.writeFileSync(path.join("test", "init.js"), injector.initCode);
     }
 }
 
