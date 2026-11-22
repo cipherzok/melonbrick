@@ -57,23 +57,16 @@ function patch(target, name) {
 
     const patched = function (...args) {
         const ctx = {
-            args: [...args],
-            returned: undefined,
-            hasReturned: false,
-
-            return(value) {
-                this.returned = value;
-                this.hasReturned = true;
-            }
+            args: [...args]
         };
 
         for (const hook of before) hook.call(this, ctx, ...args);
 
-        if (!ctx.hasReturned) ctx.returned = func.apply(this, ctx.args);
+        if (!Object.hasOwn(ctx, "return")) ctx.return = func.apply(this, ctx.args);
 
         for (const hook of after) hook.call(this, ctx, ...args);
 
-        return ctx.returned;
+        return ctx.return;
     };
 
     patchedMap.set(patched, { before, after })
